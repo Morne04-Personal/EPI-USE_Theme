@@ -1,0 +1,21 @@
+{% extends "./base.html" %}
+
+{% block body %}
+  <div class="home-page">
+    <section class="hero">
+      {% module "hero_banner" path="@hubspot/hero_banner" %}
+    </section>
+
+    <section class="features">
+      {% module "feature_section" path="./modules/feature_section.module" %}
+    </section>
+
+    <section class="about">
+      {% module "rich_text" path="./modules/rich_text.module" %}
+    </section>
+
+    <section class="cta">
+      {% module "cta_button" path="./modules/cta_button.module" %}
+    </section>
+  </div>
+{% endblock body %}

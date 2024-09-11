@@ -1,0 +1,39 @@
+{
+    "label": "Feature Section",
+    "css_assets": [],
+    "js_assets": [],
+    "icon": "list",
+    "host_template_types": ["PAGE"],
+    "fields": [
+      {
+        "name": "feature_items",
+        "label": "Feature Items",
+        "required": true,
+        "type": "group",
+        "occurrence": {
+          "min": 1,
+          "max": 4
+        },
+        "fields": [
+          {
+            "name": "icon",
+            "label": "Icon",
+            "required": false,
+            "type": "image"
+          },
+          {
+            "name": "title",
+            "label": "Title",
+            "required": true,
+            "type": "text"
+          },
+          {
+            "name": "description",
+            "label": "Description",
+            "required": true,
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  }

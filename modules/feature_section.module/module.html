@@ -1,0 +1,11 @@
+<div class="feature-section">
+    {% for item in module.feature_items %}
+      <div class="feature-item">
+        {% if item.icon.src %}
+          <img src="{{ item.icon.src }}" alt="{{ item.title }}">
+        {% endif %}
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </div>
+    {% endfor %}
+  </div>
