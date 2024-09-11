@@ -17,13 +17,6 @@
       "previewWidth": {
         "value": 477
       }
-    },
-    {
-      "name": "tablet",
-      "mediaQuery": "@media (min-width: 768px) and (max-width: 1024px)",
-      "previewWidth": {
-        "value": 1024
-      }
     }
   ]
 }
