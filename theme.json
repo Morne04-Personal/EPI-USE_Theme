@@ -2,21 +2,21 @@
   "name": "EPI-USE_Theme",
   "label": "EPI-USE Theme",
   "description": "A custom theme for EPI-USE",
+  "screenshot": "",
   "author": {
     "name": "Your Name",
     "email": "your.email@example.com",
     "website": "https://www.example.com"
   },
-  "enabled_built_in_modules": [],
-  "external_js": [],
-  "global_colors": [],
-  "global_fonts": [],
-  "portal_id": 0,
-  "version": "1.0",
-  "primary_accent_color": {
-    "color": "#000000"
-  },
-  "secondary_accent_color": {
-    "color": "#000000"
-  }
+  "version": "1.0.0",
+  "min_hubspot_cms_version": "7.0.0",
+  "responsive_breakpoints": [
+    {
+      "name": "mobile",
+      "mediaQuery": "@media (max-width: 767px)",
+      "previewWidth": {
+        "value": 477
+      }
+    }
+  ]
 }
