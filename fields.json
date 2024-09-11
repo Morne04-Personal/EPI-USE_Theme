@@ -1,3 +1,18 @@
-{
-    "global_fields": []
+[
+  {
+    "name": "primary_color",
+    "label": "Primary Color",
+    "type": "color",
+    "default": {
+      "color": "#3A3A3A"
+    }
+  },
+  {
+    "name": "secondary_color",
+    "label": "Secondary Color",
+    "type": "color",
+    "default": {
+      "color": "#FFFFFF"
+    }
   }
+]

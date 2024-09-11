@@ -1,10 +1,16 @@
-[
-  {
-    "name": "primary_color",
-    "label": "Primary Color",
-    "type": "color",
-    "default": {
-      "color": "#3A3A3A"
-    }
-  }
-]
+{
+  "label": "EPI-USE Theme",
+  "preview_path": "./templates/home.html",
+  "screenshot_path": "./images/templates/homepage.jpg",
+  "enable_domain_stylesheets": false,
+  "version": "1.0",
+  "author": {
+    "name": "Your Name",
+    "email": "your.email@example.com",
+    "url": "https://www.example.com"
+  },
+  "documentation_url": "",
+  "license": "./license.txt",
+  "example_url": "",
+  "is_available_for_new_content": true
+}
