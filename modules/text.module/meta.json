@@ -1,0 +1,26 @@
+{
+    "label": "Text Module",
+    "css_assets": [],
+    "js_assets": [],
+    "icon": "text",
+    "host_template_types": ["PAGE", "BLOG_POST", "BLOG_LISTING"],
+    "fields": [
+      {
+        "name": "text",
+        "label": "Text content",
+        "required": true,
+        "type": "richtext"
+      },
+      {
+        "name": "text_alignment",
+        "label": "Text alignment",
+        "type": "choice",
+        "choices": [
+          ["left", "Left"],
+          ["center", "Center"],
+          ["right", "Right"]
+        ],
+        "default": "left"
+      }
+    ]
+  }

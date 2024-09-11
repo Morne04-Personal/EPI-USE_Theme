@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ html_lang }}" {{ html_attributes }}>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page_meta.html_title }}</title>
+    <meta name="description" content="{{ page_meta.meta_description }}">
+    {{ standard_header_includes }}
+  </head>
+  <body>
+    <header>
+      <!-- Add your header content here -->
+    </header>
+
+    <main>
+      {% block body %}
+      {% endblock body %}
+    </main>
+
+    <footer>
+      <!-- Add your footer content here -->
+    </footer>
+
+    {{ standard_footer_includes }}
+  </body>
+</html>

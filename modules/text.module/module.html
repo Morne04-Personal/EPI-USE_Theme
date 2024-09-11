@@ -1,0 +1,6 @@
+{% set alignment = module.text_alignment %}
+<div class="text-module {% if alignment %}text-{{ alignment }}{% endif %}">
+  {% if module.text %}
+    {{ module.text }}
+  {% endif %}
+</div>
