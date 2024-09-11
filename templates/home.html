@@ -1,21 +1,46 @@
-{% extends "./base.html" %}
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Home Page
+-->
+{% extends "./layouts/base.html" %}
 
 {% block body %}
-  <div class="home-page">
-    <section class="hero">
-      {% module "hero_banner" path="@hubspot/hero_banner" %}
-    </section>
+<main class="body-container body-container--home">
+  {% dnd_area "main" class="body-container-wrapper" %}
 
-    <section class="features">
-      {% module "feature_section" path="./modules/feature_section.module" %}
-    </section>
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/hero-banner" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
 
-    <section class="about">
-      {% module "rich_text" path="./modules/rich_text.module" %}
-    </section>
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/feature-section" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
 
-    <section class="cta">
-      {% module "cta_button" path="./modules/cta_button.module" %}
-    </section>
-  </div>
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/rich-text" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="../modules/cta-button" %}{% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
 {% endblock body %}
