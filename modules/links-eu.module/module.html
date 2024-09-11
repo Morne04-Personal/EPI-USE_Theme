@@ -1,0 +1,16 @@
+<!-- ******** MODULE ******** -->
+<!-- ____ EU Link ___ -->
+
+{% for link in module.links %}
+<link-eu-wc 
+            data-text="{{ link.text_field }}"
+            att-type="{{ link.type }}"
+            att-disabled="{{ link.disabled }}"
+            att-url="{{ link.url_field.href }}"
+            att-leading-icon="{{link.leading_icon}}"
+            att-trailing-icon="{{link.trailing_icon}}"
+            att-size="{{ link.size }}"
+            class = "{{ name }}"
+></link-eu-wc>
+{% endfor %}
+<!-- ____ eu-li-END ___ -->

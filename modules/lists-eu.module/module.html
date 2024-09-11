@@ -1,0 +1,38 @@
+<!-- ******** MODULE ******** -->
+<!-- ____ EU List ___ -->
+
+<div class="list-items-container align-{{ module.styles.align_list.horizontal_align|lower }}">
+<ul class="list-items">
+{% for item in module.list_item %}
+
+<list-eu-wc 
+            att-top-text="{{ item.top_text }}"
+            att-show-top-text="{{item.show_top_text}}"
+            att-caption="{{ item.caption }}"
+            att-show-caption="{{item.show_caption}}"
+            att-primary-text="{{ item.primary_text }}"
+            att-show-primary-text="{{item.show_primary_text}}"
+            att-bottom-text="{{ item.bottom_text }}"
+            att-show-bottom-text="{{item.show_bottom_text}}"
+            att-url="{{ item.url_field.href }}"
+            att-leading-icon="{{item.leading_icon}}"
+            att-trailing-icon="{{item.trailing_icon}}"
+            att-show-badge="{{item.show_badge}}"
+            att-badge-label="{{item.badge.badge_label}}"
+            att-badge-type="{{item.badge.badge_type}}"
+            att-badge-show-label="{{item.badge.badge_show_label}}"
+            att-badge-leading-icon="{{item.badge.badge_leading_icon}}"
+
+            att-show-primary-badge="{{item.show_primary_badge}}"
+            att-primary-badge-label="{{item.primary_badge.badge_label}}"
+            att-primary-badge-type="{{item.primary_badge.badge_type}}"
+            att-primary-badge-show-label="{{item.primary_badge.badge_show_label}}"
+            att-primary-badge-leading-icon="{{item.primary_badge.badge_leading_icon}}"
+
+            att-disabled="{{item.disabled}}"
+            class = "{{ name }}"
+></list-eu-wc>
+
+{% endfor %}
+</ul>
+</div>

@@ -1,0 +1,46 @@
+<!--
+  templateType: section
+  label: Basic Form
+  isAvailableForNewContent: true
+  description: "Full size background color section separated in three columns with with an image and text in each."
+-->
+
+<!-- Begin partial -->
+{% dnd_section 
+background_color='#f2f3f6',
+padding={'top': 300, 'bottom': 300, 'left': 16, 'right': 16},
+max_width=1200,
+full_width = false,
+background_image={
+        'backgroundPosition': 'MIDDLE_CENTER',
+        'backgroundSize': 'cover',
+        'imageUrl': 'https://epiuse.com/hubfs/elephant-grey.png'
+      },
+%}
+  {% dnd_column width=6 %}
+    {% dnd_row %}
+      {% dnd_module "horizontal_spacer" path="@hubspot/horizontal_spacer" %}{% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% dnd_column width=6, offset=6 %}
+    {% dnd_row %}
+      
+      {% dnd_module "form" 
+      path="@hubspot/form" 
+      title="Form Title"
+      form={
+        "form_id": "5c5ca3d0-1bad-478e-a115-1ad3e1ba96d7", 
+        "response_type": "redirect", 
+        "message": "Thanks for submitting the form.", 
+        "redirect_id": null, 
+        "redirect_url": "http://www.google.com" 
+      }
+      %}{% end_dnd_module %}
+      
+
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+
+
+{% end_dnd_section %}
+<!-- End partial -->

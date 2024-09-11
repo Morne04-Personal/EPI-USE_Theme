@@ -1,0 +1,60 @@
+{{ require_css(get_asset_url("../../css/components/_article-card.css")) }}
+
+  <!-- ******** MODULE ******** -->
+  <!-- ____ EU Article Cards ___ -->
+
+<div class="container">
+  <div class="row g-1 row-cols-1 row-cols-md-2 row-cols-lg-3">
+
+      {% for card in module.ac_cards %}
+
+        <div class="col">
+          {# <div class="card card-body h-100"> #}
+              {% require_css %} {# this will put the CSS into the <head>-tag to use hubble inside css #}
+                <style>
+                  .ac-img-{{ name }}{
+                    background-image: linear-gradient(transparent, var(--midnight-blue-75)), url({{ card.ac_image.src|escape_url }});
+                  }
+                  .ac-img-{{ name }}:hover, .ac-img:active, .ac-img:focus{
+                    background-image: linear-gradient(var(--midnight-blue-50), var(--midnight-blue-50)), url({{ card.ac_image.src|escape_url }});
+                  }
+                </style>
+              {% end_require_css %}
+
+
+              {% set href = card.ac_link_field.url.href %}
+              {% if card.ac_link_field.url.type is equalto "EMAIL_ADDRESS" %}
+                {% set href = "mailto:" + href %}
+              {% endif %}
+
+              <a  
+                {% if href %}
+                  href="{{ href|escape_url }}"
+                  {% if card.ac_link_field.open_in_new_tab %}target="_blank"{% endif %}
+                  {% if card.ac_link_field.rel %}rel="{{ card.ac_link_field.rel|escape_attr }}"{% endif %}
+                {% endif %} 
+                class="article-card-a ac-fill article-card-sizing {{ card.ac_size }} {{ name }}"
+              >
+              <div class="article-card ac-fill article-card-sizing {{ card.ac_size }} {{ card.ac_type }} {% if card.ac_type == "ac-img" %}ac-img-{{ name }}{% endif %}">
+                  <div class="ac-arrow-icon">
+                    {% if card.ac_show_icon %}<i class="arrow-icon fa-regular fa-arrow-up-right"></i>{% endif %}
+                  </div>
+                  <div class="ac-text-content">
+                    {% if card.ac_show_heading %}<h3 class="ac-heading-text">{{ card.ac_heading_text }}</h3>{% endif %} 
+                    {% if card.ac_show_date %}<p class="ac-date">{{ card.ac_date }}</p>{% endif %}
+                    {% if card.ac_show_title %}<h5 class="ac-title">{{ card.ac_title }}</h5>{% endif %}
+                    {% if card.ac_show_body %}<p class="ac-body-text">{{ card.ac_body_text }}</p>{% endif %}
+                  </div>
+                </div>
+              </a>
+          {# </div> #}
+        </div>              
+      {% endfor %}
+
+  </div>
+</div>
+
+
+
+
+<!-- ____ eu-ac-END ___ -->

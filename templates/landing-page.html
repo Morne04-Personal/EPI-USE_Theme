@@ -1,0 +1,56 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Landing page
+  screenshotPath: ../images/template-previews/landing-page.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block header %}
+  {% global_partial path="./partials/header-global.html" %}
+{% endblock header %}
+
+
+{# {% block header %}
+  {% global_partial path="./partials/header-no-navigation.html" %}
+{% endblock header %} #}
+
+{% block body %}
+{% dnd_area "dnd_area"
+  label="Main section",
+  class="body-container body-container--landing-page"
+%}
+
+  {# Hero banner #}
+
+  {% dnd_section 
+    background_color='#f2f3f6',
+    padding={'top': 0, 'bottom': 0, 'left': 0, 'right': 0},
+    full_width = true %}
+    {% dnd_column width=12 %}
+      {% dnd_row %}
+        {% dnd_module 'heroslides' path='../modules/heroslides-eu.module' %}{% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+  {# Section Header #}
+
+  {% dnd_section 
+    background_color='#f2f3f6',
+    padding={'top': 64, 'bottom': 64, 'left': 16, 'right': 16},
+    width=1200
+  %}
+    {% dnd_column width=12 %}
+      {% dnd_row %}
+        
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+{% end_dnd_area %}
+{% endblock body %}
+
+{% block footer %}
+  {% global_partial path="./partials/footer-micro.html" %}
+{% endblock footer %}

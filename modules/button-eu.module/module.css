@@ -1,0 +1,8 @@
+.header-global__button .button::part(button) {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

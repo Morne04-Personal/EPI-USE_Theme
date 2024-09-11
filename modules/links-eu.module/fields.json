@@ -1,0 +1,103 @@
+[ 
+
+{
+  "name" : "links",
+  "display_width" : null,
+  "label" : "Links",
+  "required" : true,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 10,
+    "sorting_label_field" : null,
+    "default" : 5
+  },
+  "children" : [
+{
+
+  "name" : "url_field",
+  "display_width" : null,
+  "label" : "URL",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+  "type" : "url",
+  "default" : {
+    "content_id" : null,
+    "href" : "",
+    "type" : "EXTERNAL"
+  }
+}, {
+
+  "name" : "text_field",
+  "display_width" : null,
+  "label" : "Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Link"
+}, {
+
+  "name" : "type",
+  "display_width" : null,
+  "label" : "Type",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "pri", "Primary" ], [ "pri-inv", "Primary Invert" ], [ "sec", "Secondary" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "default" : "pri"
+}, {
+  "name" : "disabled",
+  "display_width" : null,
+  "label" : "Disabled",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "default" : false
+}, {
+  "name" : "leading_icon",
+  "display_width" : null,
+  "label" : "Leading Icon",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : false
+}, {
+
+  "name" : "trailing_icon",
+  "display_width" : null,
+  "label" : "Trailing Icon",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : true
+}, {
+  "name" : "size",
+  "display_width" : null,
+  "label" : "Size",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "sm", "Small" ], [ "md", "Medium" ], [ "lg", "Large" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "default" : "sm"
+}]
+,
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group"
+} ]

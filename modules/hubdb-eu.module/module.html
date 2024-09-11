@@ -1,0 +1,120 @@
+{% if module.hdb_display == "article-card" %}
+
+<link rel="stylesheet" href="{{get_asset_url('../../css/components/_article-card.css') }}" />
+
+{% else %}
+  <link rel="stylesheet" href="{{get_asset_url('../../css/components/_var-card.css') }}" />
+{% endif %}
+
+<!-- ******** MODULE ******** -->
+<!-- ____ EU Article Card ___ -->
+
+{% if module.hdb_order == "hdb-order-featured" %}
+  {% set ordering = "&orderBy=featured&orderBy=-hs_created_at" %}
+{% elif module.hdb_order == "hdb-order-date-asc" %}
+  {% set ordering = "&hs_created_at" %}
+{% else %}
+  {% set ordering = "&-hs_created_at" %}
+{% endif %}
+
+{% if request.query_dict.filter %}
+  {% set ordering = ordering ~ "&category=" ~ request.query_dict.filter %}
+{% endif %}
+
+
+{% set table_rows = hubdb_table_rows(module.hdb_table, ordering) %}
+{% if module.hdb_filter == "hdb-filter-featured"%}
+  {% set table_rows = table_rows|selectattr('featured')%}
+{% else if module.hdb_filter == "hdb-filter-not-featured"%}
+  {% set table_rows = table_rows|rejectattr('featured') %}
+{% endif %}
+
+<div class="hubdb-eu {{ name }}">
+  {% for row in  table_rows %}
+    {% set href = row.link %}
+
+
+    {% if module.hdb_display == "article-card" %}
+
+    <a  
+      {% if href %}
+        href="{{ href|escape_url }}"
+      {% endif %} 
+      class="article-card-a ac-hug article-card-sizing {{ module.hdb_size }} {{ name }}"
+    >
+    <div class="article-card ac-hug article-card-sizing {{ module.hdb_size }} {% if row.image %}ac-img{% else %}ac-mnt-blue{% endif %}" {% if row.image %}style="background-image: linear-gradient(transparent, var(--midnight-blue-75)), url({{ row.image.url }});"{% endif %}>
+        <div class="ac-arrow-icon">
+          {% if module.hdb_show_icon %}<i class="arrow-icon fa-regular fa-arrow-up-right"></i>{% endif %}
+        </div>
+        <div class="ac-text-content">
+          {% if module.hdb_show_title %}<h3 class="hdb-title-text ac-heading-text">{{ row.title }}</h3>{% endif %} 
+          {% if module.hdb_show_date %}<p class="hdb-date ac-date">{{ row.date | format_date('EEE dd, yyyy') }}</p>{% endif %}
+          {% if module.hdb_show_field_1 %}<h5 class="hdb-field1-text ac-title">{{ row.field_1 }}</h5>{% endif %}
+          {% if module.hdb_show_field_2 %}<span><p class="hdb-field2-text ac-body-text">{{ row.field_2 }}</p></span>{% endif %}
+          {% if module.hdb_show_field_3 %}<p class="hdb-field3-text ac-body-text">{{ row.field_3 }}</p>{% endif %}
+        </div>
+      </div>
+    </a>
+    {% else %}
+
+
+      <div class="var-card card-vertical card-image card-image-{{module.image_placement}}  card-background-{{module.var_card_colour}} clearfix linked-card  ">
+  
+        {% if row.image %}
+          {% if module.image_placement == "leading" %}
+              <div class="image"  style=" background-image: url({{ row.image.url }}); background-size: cover; background-position: center;"></div>
+          {% endif %}
+        {%endif %}
+
+
+  
+        <div class="content">
+          {% if module.hdb_show_icon %}
+          <div class="card-link-container clearfix"><a class="card-link" href="{{ href|escape_url }}"><i class="fa-light fa-arrow-up-right" aria-hidden="true"></i></a></div>
+          {% endif %}
+            {% if module.hdb_show_title %}
+              <h2 class="hide-on-mobile">
+                {{ row.title }}
+              </h2>
+              <h3 class="hide-on-desktop">
+                {{ row.title }}
+              </h3>
+            {% endif %}
+          
+            {% if module.hdb_show_field_1 %}
+              <h3 class="hide-on-mobile">
+              {{ row.field_1 }}
+              </h3>
+              <h5 class="hide-on-desktop">
+              {{ row.field_1 }}
+              </h5>
+            {% endif %}
+          
+          {% if module.hdb_show_date %}<span class="date">{{ row.date | format_date('EEE dd, yyyy') }}</span>{% endif %}
+          
+          {% if module.hdb_show_field_2 %}
+            <div class="text">
+              {{ row.field_2 }}
+            </div> 
+          {% endif %}
+
+          {% if module.hdb_show_field_3 %}
+            <div class="text">
+              {{ row.field_3 }}
+            </div> 
+          {% endif %}
+          
+        </div>
+        {% if row.image %}
+          {% if module.image_placement == "trailing" %}
+            <div class="image"  style=" background-image: url({{ row.image.url }}); background-size: cover; background-position: center;"></div>
+          {% endif %}
+        {% endif %}
+      </div>
+
+
+    {% endif %}
+  {% endfor %}  
+</div>
+  
+<!-- ____ eu-ac-END ___ -->

@@ -1,0 +1,28 @@
+<!-- ******** MODULE ******** -->
+<!-- ____ EU Section Header ___ -->
+
+
+<div id="{{module.anchor_tag}}" class="section-header {{ name }} {% if module.sh_dark_mode == "true" %}sh-dark-mode{% else %}sh-light-mode{% endif %} {{ module.align }}">
+  {% if module.show_subtext %}
+    <h5 class="sh-subtext">
+      {{ module.subtext }}
+    </h5>
+  {% endif %}
+  {% if module.show_heading %}
+    <{{ module.heading_font }} class="sh-heading">
+      {{ module.heading }}
+    </{{ module.heading_font }}>
+  {% endif %}
+  {% if module.show_sub_heading %}
+    <h3 class="sh-sub-heading">
+      {{ module.sub_heading }}
+    </h3>
+  {% endif %}
+  {% if module.show_body %}
+    <p class="sh-body-text">
+      {{ module.body_text }}
+    </p>
+  {% endif %}
+</div>
+
+<!-- ____ eu-sh-END ___ -->

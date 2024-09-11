@@ -1,0 +1,144 @@
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.icon-square {
+    background-color: transparent;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    
+}
+
+.row .icon-square {
+    flex: none;
+}
+
+/* This container is needed to position the front and back side */
+.icon-square-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    box-sizing: border-box;
+}
+
+.is-pr-white{
+    background-color: var(--pure-white);
+    color: var(--midnight-blue);
+}
+.is-mnt-blue{
+    background-color: var(--midnight-blue);
+    color: var(--pure-white);
+}
+.is-ple-blue{
+    background-color: var(--pale-blue);
+    color: var(--pure-white);
+}
+.is-pr-white.is-blur{
+    background-color: var(--pure-white-75);
+}
+.is-mnt-blue.is-blur{
+    background-color: var(--midnight-blue-75);
+}
+.is-ple-blue.is-blur{
+    background-color: var(--pale-blue-75);
+}
+
+.is-blur{
+    backdrop-filter: blur(var(--blur-lg));
+}
+
+.is-lrg{
+    width: 282px;
+    height: 282px;
+}
+.is-sm{
+    width: 220px;
+    height: 165px;
+}
+/* 
+.is-lrg .is-eu-icon {
+    width: 108px;
+    height: 108px;
+}
+
+.is-sm .is-eu-icon {
+    width: 65.5px;
+    height: 65.5px;
+} */
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flipable:hover .icon-square-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.icon-square-front, .icon-square-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    padding: 32px;
+    border-radius: 4px;
+}
+
+.is-sm .icon-square-front-heading{
+  font-family: var(--h6-font-family);
+  font-size: var(--h6-font-size);
+  font-weight: var(--h6-font-weight);
+  line-height: var(--h6-line-height);
+}
+.is-lrg .icon-square-front-heading{
+  font-family: var(--h3-font-family);
+  font-size: var(--h3-font-size);
+  font-weight: var(--h3-font-weight);
+  line-height: var(--h3-line-height);
+}
+
+.is-front-content{
+    height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+
+.icon-square-front-heading{
+    margin: 8px 0 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* Style the back side */
+.icon-square-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+}
+
+.is-back-content{
+    height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+
+.icon-square-back-text{
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height: var(--body-line-height);
+  margin:0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 9;
+  -webkit-box-orient: vertical;
+}
+
+

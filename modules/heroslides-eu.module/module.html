@@ -1,0 +1,262 @@
+<!-- ******** MODULE ******** -->
+<!-- ____ EU HeroSlide Carousel ___ -->
+
+<div class="heroslide-carousel heroslide-carousel-{{name}} {{ name }} ">
+  
+  {% for item in module.hsc_slide %}
+    {% if item.hsc_type == "hs-text-image" %}
+      {% set item_image = item.hsc_hero_image.src|escape_url%}
+    {% elif item.hsc_color == "hs-midnight-blue" %}
+      {% set item_image = "https://2930497.fs1.hubspotusercontent-na1.net/hubfs/2930497/Slide-background-with-elephant.png" %}
+    {% else %}
+      {% set item_image = "https://2930497.fs1.hubspotusercontent-na1.net/hubfs/2930497/Hero.png" %}
+    {% endif %}
+    
+    <div class="hsc-slide {% if item.dark_mode == "true" %} hsc-slide-dark-mode {% endif %}">
+      <div class="heroslide" style="background-image: url({{ item_image }});">
+        <div class="hs-inner">
+          {% if item.hsc_mobile_image_placement == "leading" %}
+          <div class="hs-vertical-image" style="background-image: url({{ item_image }})">
+          </div>
+          {% endif %}
+          <div class="hs-content {{ item.hsc_color }} {{ item.hsc_type }} hs-section-width">
+            <div class="hs-content-inner">
+              <div class="hs-text-content">
+                <h5 class="hs-heading-text">{{ item.hsc_heading_text }}</h5>
+                <h1 class="hs-title">{{ item.hsc_title }}</h1>
+                <p class="hs-body-text">{{ item.hsc_body_text }}</p>
+              </div>
+              {% if item.show_logos == "true" %}
+                <div class="hsc-logo-grid">
+                  <div class="hsc-lg-inner container">
+                    <div class="row row-cols-4">
+                        {% for logo in item.lg_logos %}
+                            <div class="col-auto">
+
+                                <div class="lg-logo">
+                                    {% if logo.lg_logo.src %}
+                                        {% set sizeAttrs = 'width="{{ logo.lg_logo.width|escape_attr }}" height="{{ logo.lg_logo.height|escape_attr }}"' %}
+                                        {% if logo.lg_logo.size_type == 'auto' %}
+                                            {% set sizeAttrs = 'width="{{ logo.lg_logo.width|escape_attr }}" height="{{ logo.lg_logo.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+                                        {% elif logo.lg_logo.size_type == 'auto_custom_max' %}
+                                            {% set sizeAttrs = 'width="{{ logo.lg_logo.max_width|escape_attr }}" height="{{ logo.lg_logo.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+                                        {% endif %}
+                                        {% set loadingAttr = logo.lg_logo.loading != 'disabled' ? 'loading="{{ logo.lg_logo.loading|escape_attr }}"' : '' %}
+                                        <img src="{{ logo.lg_logo.src|escape_url }}" alt="{{ logo.lg_logo.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                                    {% else %}
+                                        <div class="lg-placeholder">
+                                            <h4 class="font-h4">{{logo.lg_logo_placeholder_text}}</h4>
+                                        </div>
+                                    {% endif %}
+                                </div>
+
+
+                            </div>              
+                        {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+              {% if item.show_buttons %}
+              <div class="hs-buttons">
+                <div class="hs-buttons-inner"><!-- Note add 'display: flex' to container if multiple web components are next to each other to remove white space between them -->
+                    <button-eu-wc class="hs-btn-left"
+                        data-label="{{ item.left_button.button_label }}"
+                        att-size="btn-med"
+                        att-type="{{ item.left_button.button_type }}"
+                        att-disabled="false"
+                        att-url="{{ item.left_button.link.url.href }}"
+                        att-show-icon="true"
+                        att-lead-icon="{{ item.left_button.button_leading_icon }}"
+                        att-icon="{% if item.left_button.lbutton_icon_category == "cat-arrows" && item.left_button.cat_arrows %}{{item.left_button.cat_arrows}}{% 
+                            elif item.left_button.lbutton_icon_category == "cat-data" && item.left_button.cat_data %}{{item.left_button.cat_data}}{% 
+                            elif item.left_button.lbutton_icon_category == "cat-editing" && item.left_button.cat_editing %}{{item.left_button.cat_editing}}{% 
+                            elif item.left_button.lbutton_icon_category == "cat-foundations" && item.left_button.cat_foundations %}{{item.left_button.cat_foundations}}{% 
+                            elif item.left_button.lbutton_icon_category == "cat-company" && item.left_button.cat_company %}{{item.left_button.cat_company}}{% 
+                            elif item.left_button.lbutton_icon_category == "cat-alerts" && item.left_button.cat_alerts %}{{item.left_button.cat_alerts}}{% 
+                        endif %}"
+                    ></button-eu-wc>
+                  {% if item.right_button.show_button %}
+                    <button-eu-wc class="hs-btn-right"
+                        data-label="{{ item.right_button.button_label }}"
+                        att-size="btn-med"
+                        att-type="{{ item.right_button.button_type }}"
+                        att-disabled="false"
+                        att-url="{{ item.right_button.link.url.href }}"
+                        att-show-icon="true"
+                        att-lead-icon="{{ item.right_button.button_leading_icon }}"
+                        att-icon="{% if item.right_button.rbutton_icon_category == "cat-arrows" && item.right_button.cat_arrows %}{{item.right_button.cat_arrows}}{% 
+                            elif item.right_button.rbutton_icon_category == "cat-data" && item.right_button.cat_data %}{{item.right_button.cat_data}}{% 
+                            elif item.right_button.rbutton_icon_category == "cat-editing" && item.right_button.cat_editing %}{{item.right_button.cat_editing}}{% 
+                            elif item.right_button.rbutton_icon_category == "cat-foundations" && item.right_button.cat_foundations %}{{item.right_button.cat_foundations}}{% 
+                            elif item.right_button.rbutton_icon_category == "cat-company" && item.right_button.cat_company %}{{item.right_button.cat_company}}{% 
+                            elif item.right_button.rbutton_icon_category == "cat-alerts" && item.right_button.cat_alerts %}{{item.right_button.cat_alerts}}{% 
+                        endif %}"
+                    ></button-eu-wc>
+                  {% endif %}
+                </div>
+              </div>
+              {% endif %}
+              {% if item.show_arrow_buttons %}
+              <div class="hs-arrow-buttons">
+                <div class="hs-arrow-buttons-inner"><!-- Note add 'display: flex' to container if multiple web components are next to each other to remove white space between them -->
+                  <button-arrow-eu-wc 
+                      data-label="{{ item.left_arrow_button.button_label }}"
+                      att-type="{{ item.left_arrow_button.button_type }}"
+                      att-disabled="false"
+                      att-url="{{ item.left_arrow_button.link_field.href }}"
+                      att-orientation="btn-horizontal"
+                      att-size="{{ item.left_arrow_button.button_size }}"
+                      att-align="LEFT"
+                      att-spacing=""
+                      att-flex="ba-hug"
+                      class="btn-arrow-left"
+                  ></button-arrow-eu-wc>
+                  {% if item.right_arrow_button.show_right_arrow_button %}
+                    <button-arrow-eu-wc 
+                      data-label="{{ item.right_arrow_button.button_label }}"
+                      att-type="{{ item.right_arrow_button.button_type }}"
+                      att-disabled="false"
+                      att-url="{{ item.right_arrow_button.link_field.href }}"
+                      att-orientation="btn-horizontal"
+                      att-size="{{ item.right_arrow_button.button_size }}"
+                      att-align="LEFT"
+                      att-spacing=""
+                      att-flex="ba-hug"
+                      class="btn-arrow-right"
+                  ></button-arrow-eu-wc>
+                  {% endif %}
+                </div>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+          {% if item.hsc_mobile_image_placement == "trailing" %}
+          <div class="hs-vertical-image" style="background-image: url({{ item_image }})">
+          </div>
+          {% endif %}
+
+
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<!-- ____ eu-hsc-END ___ -->
+
+{% if module.hsc_slide|length > 1 %}
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  {% require_js %}
+  <script>
+    $(document).ready(function(){
+      $('.heroslide-carousel-{{name}}').slick({
+        'arrows': false,
+        'dots': true,
+        'autoplay': true,
+        'autoplaySpeed': 5000,
+        'adaptiveHeight': false
+      });
+          
+    });
+  </script>
+  {% end_require_js %}
+{% endif %}
+
+{% set has_content_small_padding_breakpoint = module.styles.hsc_section_width + 72 %}
+
+
+<style>
+    .heroslide-carousel-{{name}} {
+      position: relative;
+    }
+    .heroslide-carousel-{{name}} .slide .slide-inner  {
+      box-shadow: var(--shadow-lg);
+    }
+    .heroslide-carousel-{{name}} .slide {
+      padding:8px;
+    }
+    .heroslide-carousel-{{name}}:after {
+    content: "";
+      display: block;
+      clear: both;
+    }
+    .slick-dots {
+    position: absolute;
+      bottom: -80px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      list-style: none;
+    }
+    .slick-dots li {
+    display: inline-block; 
+      margin: 0 var(--margin-xs);
+    }
+    .slick-dots button {
+      border-radius: 0 !important;  
+      background-color: #919191 !important;
+    }
+    .slick-dots .slick-active button{
+      width: 24px !important;
+      background-color: #313131 !important;
+    }
+
+    .heroslide-carousel-{{name}} .hsc-slide{
+      width: 100%;
+    }
+    .heroslide-carousel-{{name}} .heroslide {
+        width: 100%; 
+        height: 720px;
+        display: flex;
+        align-items: center;
+        
+        background-size: cover; /* This will make the background image cover the entire element */
+        background-repeat: no-repeat; /* Prevent the background image from repeating */
+        background-position: center; /* Right align the background image within the element */
+    }
+
+    .heroslide-carousel-{{name}} .hs-section-width{
+        padding-left: calc((100% - {{ module.styles.hsc_section_width }}px) / 2);
+    }
+
+    @media (max-width: {{ has_content_small_padding_breakpoint}}px) {
+        .heroslide-carousel-{{name}} .hs-content{
+            padding-left: var(--padding-xl);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .heroslide-carousel-{{name}} .hs-vertical-image {
+            display: block; /* Unhide the hs-vertical-image div when screen width is below 768px */
+        }
+        .heroslide-carousel-{{name}} .heroslide{
+            height: auto;
+            background: none; /*Hide background of heroslide div when screen width is below 768px */
+        }
+        .heroslide-carousel-{{name}} .hs-midnight-blue{
+            background-color: var(--midnight-blue);
+        }
+        .heroslide-carousel-{{name}} .hs-pure-white{
+            background-color: var(--pure-white);
+        }
+    }
+
+    @media( max-width: 585px) {
+        .heroslide-carousel-{{name}} .hs-content{
+            padding: var(--padding-lg);
+        }
+
+        .heroslide-carousel-{{name}} .hs-vertical-image {
+          height: 360px;
+        }
+    }
+
+    @media (max-width: 375px) {
+        .heroslide-carousel-{{name}} .hs-content{
+            padding: var(--padding-md);
+        }
+        .heroslide-carousel-{{name}} .hs-vertical-image {
+          height: 240px;
+        }
+    }
+</style>

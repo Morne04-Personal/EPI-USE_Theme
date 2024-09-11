@@ -1,0 +1,690 @@
+[ {
+  "id" : "acc_sections",
+  "name" : "acc_sections",
+  "display_width" : null,
+  "label" : "Sections",
+  "required" : true,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "acc_sections.sec_header_text",
+    "name" : "sec_header_text",
+    "display_width" : null,
+    "label" : "Label",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Label"
+  }, {
+    "id" : "acc_sections.sec_show_image",
+    "name" : "sec_show_image",
+    "display_width" : null,
+    "label" : "Show Image",
+    "required" : true,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "acc_sections.sec_image",
+    "name" : "sec_image",
+    "display_width" : null,
+    "label" : "Section Image",
+    "required" : true,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "acc_sections.sec_show_image",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto_custom_max",
+      "src" : "https://2930497.fs1.hubspotusercontent-na1.net/hubfs/2930497/00-Website/09-Company-Pages/00-Office-Locations/stellenbosch.jpg",
+      "alt" : "image conv",
+      "loading" : "lazy",
+      "width" : 1600,
+      "height" : 1067,
+      "max_width" : 795,
+      "max_height" : 530
+    }
+  }, {
+    "id" : "acc_sections.sec_show_subheading",
+    "name" : "sec_show_subheading",
+    "display_width" : null,
+    "label" : "Show Subheading",
+    "required" : true,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "acc_sections.sec_subheading_text",
+    "name" : "sec_subheading_text",
+    "display_width" : null,
+    "label" : "Section Subheading",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "acc_sections.sec_show_subheading",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Subheading"
+  }, {
+    "id" : "acc_sections.sec_show_title",
+    "name" : "sec_show_title",
+    "display_width" : null,
+    "label" : "Show Title",
+    "required" : true,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "acc_sections.sec_title_text",
+    "name" : "sec_title_text",
+    "display_width" : null,
+    "label" : "Section Title",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "acc_sections.sec_show_title",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Titles of paragraphs and descriptions"
+  }, {
+    "id" : "acc_sections.sec_show_caption",
+    "name" : "sec_show_caption",
+    "display_width" : null,
+    "label" : "Show Caption",
+    "required" : true,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "acc_sections.sec_caption_text",
+    "name" : "sec_caption_text",
+    "display_width" : null,
+    "label" : "Section Caption",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "acc_sections.sec_show_caption",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Additional information"
+  }, {
+    "id" : "acc_sections.sec_show_body",
+    "name" : "sec_show_body",
+    "display_width" : null,
+    "label" : "Show Body",
+    "required" : true,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "acc_sections.sec_body_text",
+    "name" : "sec_body_text",
+    "display_width" : null,
+    "label" : "Section Body",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "acc_sections.sec_show_body",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : true,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Lorem ipsum dolor sit amet consectetur. Ipsum in tortor tortor ac nunc rhoncus. Arcu facilisis nunc nec cras. Amet feugiat sed sit egestas ac tellus duis tortor. Scelerisque feugiat sagittis elementum tellus aliquet faucibus placerat ridiculus nibh. Est nec fermentum pretium amet nullam porta nunc cursus. Aliquet id mauris donec vitae. Platea fringilla at proin vel. Facilisis metus ultrices donec id sit vitae aliquam pulvinar purus. Vel amet amet elementum vestibulum mauris vel commodo ac volutpat.</br></br> Tempus proin varius hendrerit facilisi eu volutpat nulla scelerisque. Lobortis ac quam quis ut. Consectetur mauris vel sit sit cursus. Enim mi arcu placerat maecenas non gravida. A donec auctor tortor sed convallis amet donec euismod. Rhoncus venenatis viverra malesuada risus morbi ornare et. Risus nibh at scelerisque varius egestas adipiscing auctor. Nec in amet maecenas quis ornare ac aenean iaculis mi. Quam aliquet in morbi at. Malesuada morbi eget lacus at ante vel lobortis auctor nunc. Consectetur mattis quis eu in. Posuere orci nibh mi sagittis odio cum. Quis odio felis bibendum nibh quis quis. In in eu in enim tincidunt. Tellus fermentum ut scelerisque enim ac. Elementum odio orci at elit fermentum amet mattis. Tempus scelerisque tristique mi odio aliquet fermentum lectus. Cursus elit fames pellentesque volutpat massa quis risus. Arcu lectus et tempus morbi molestie gravida tempor arcu dapibus. Eu turpis vitae aliquam ornare sed massa tristique. Sem nunc sollicitudin dignissim laoreet eget. Morbi vitae nullam ut nisi feugiat lacus. Ornare id dignissim blandit fermentum varius et habitant ipsum. Tellus vestibulum dignissim vitae sagittis aliquam dictumst. Diam non faucibus egestas enim feugiat. Varius aliquam vitae mauris velit ac faucibus. Adipiscing eros sed quis quis interdum. Ut rhoncus nunc habitasse et. In volutpat nunc integer nulla tortor. Viverra cras non purus id iaculis consectetur id."
+  }, {
+    "id" : "acc_sections.left_button",
+    "name" : "left_button",
+    "display_width" : null,
+    "label" : "Left Button",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "acc_sections.left_button.button_label",
+      "name" : "button_label",
+      "display_width" : null,
+      "label" : "Button Label",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Label"
+    }, {
+      "id" : "acc_sections.left_button.button_type",
+      "name" : "button_type",
+      "display_width" : null,
+      "label" : "Button Type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "btn-pri", "Primary" ], [ "btn-pri-inv", "Primary Inverted" ], [ "btn-sec", "Secondary" ], [ "btn-gho", "Ghost" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "btn-sec"
+    }, {
+      "id" : "acc_sections.left_button.button_leading_icon",
+      "name" : "button_leading_icon",
+      "display_width" : null,
+      "label" : "Button Leading Icon",
+      "required" : false,
+      "locked" : false,
+      "display" : "toggle",
+      "type" : "boolean",
+      "default" : true
+    }, {
+      "id" : "acc_sections.left_button.show_button",
+      "name" : "show_button",
+      "display_width" : null,
+      "label" : "Show Button",
+      "required" : false,
+      "locked" : false,
+      "display" : "toggle",
+      "type" : "boolean",
+      "default" : false
+    }, {
+      "id" : "acc_sections.left_button.lbutton_icon_category",
+      "name" : "lbutton_icon_category",
+      "display_width" : null,
+      "label" : "Icon Category",
+      "required" : true,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "cat-arrows", "Arrows & Actions" ], [ "cat-data", "Data" ], [ "cat-editing", "Editing & Files" ], [ "cat-foundations", "Foundations" ], [ "cat-company", "Company" ], [ "cat-alerts", "Alerts & Controls" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "cat-company"
+    }, {
+      "id" : "acc_sections.left_button.cat_arrows",
+      "name" : "cat_arrows",
+      "display_width" : null,
+      "label" : "Icon (arrows & actions)",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "acc_sections.left_button.lbutton_icon_category",
+        "controlling_value_regex" : "cat-arrows",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "arrow-up-right", "Arrow Up Right" ], [ "arrow-up", "Arrow Up" ], [ "arrow-down", "Arrow Down" ], [ "arrow-left", "Arrow Left" ], [ "arrow-right", "Arrow Right" ], [ "arrow-rotate-right", "Arrow Rotate Right" ], [ "arrow-up-right-from-square", "Arrow Up Right From Square" ], [ "arrow-up-from-bracket", "Arrow Up From Bracket" ], [ "arrow-down-to-line", "Arrow Down To Line" ], [ "arrows-rotate", "Arrows Rotate" ], [ "arrows-minimize", "Arrows Minimize" ], [ "arrows-maximize", "Arrows Maximize" ], [ "arrow-up-arrow-down", "Arrow up Arrow Down" ], [ "arrow-right-to-bracket", "Arrow Right To Bracket" ], [ "chevron-up", "Chevron Up" ], [ "chevron-down", "Chevron Down" ], [ "chevron-left", "Chevron Left" ], [ "chevron-right", "Chevron Right" ], [ "copy", "Copy" ], [ "link", "Link" ], [ "filter", "Filter" ], [ "bookmark", "Bookmark" ], [ "share", "Share" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "arrow-up-right"
+    }, {
+      "id" : "acc_sections.left_button.cat_data",
+      "name" : "cat_data",
+      "display_width" : null,
+      "label" : "Icon (data)",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "acc_sections.left_button.lbutton_icon_category",
+        "controlling_value_regex" : "cat-data",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "table", "Table" ], [ "timeline-arrow", "Timeline Arrow" ], [ "file_spreadsheet", "File Spreadsheet" ], [ "database", "Database" ], [ "chart-simple", "Chart Simple" ], [ "cloud", "Cloud" ], [ "cloud-arrow-up", "Cloud Arrow Up" ], [ "calculator", "Calculator" ], [ "percent", "Percent" ], [ "network-wired", "Network Wired" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "table"
+    }, {
+      "id" : "acc_sections.left_button.cat_editing",
+      "name" : "cat_editing",
+      "display_width" : null,
+      "label" : "Icon (editing & files)",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "acc_sections.left_button.lbutton_icon_category",
+        "controlling_value_regex" : "cat-editing",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "file", "File" ], [ "folder", "Folder" ], [ "paperclip", "paperclip" ], [ "file-lines", "File Lines" ], [ "file-pdf", "File pdf" ], [ "list-check", "List Check" ], [ "thumbtack", "Thumbtack" ], [ "pen", "Pen" ], [ "image", "Image" ], [ "pen-to-square", "Pen To Square" ], [ "folder-open", "Foler Open" ], [ "book", "Book" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "file"
+    }, {
+      "id" : "acc_sections.left_button.cat_foundations",
+      "name" : "cat_foundations",
+      "display_width" : null,
+      "label" : "Icon (foundations)",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "acc_sections.left_button.lbutton_icon_category",
+        "controlling_value_regex" : "cat-foundations",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "copyright", "Copyright" ], [ "house", "House" ], [ "magnifying-glass", "Magnifying Glass" ], [ "registered", "Registered" ], [ "phone", "Phone" ], [ "location-dot", "Location Dot" ], [ "phone-volume", "Phone Volume" ], [ "envelope", "Envelope" ], [ "globe", "Globe" ], [ "calendar-days", "Calendar Days" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "copyright"
+    }, {
+      "id" : "acc_sections.left_button.cat_company",
+      "name" : "cat_company",
+      "display_width" : null,
+      "label" : "Icon (company)",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "acc_sections.left_button.lbutton_icon_category",
+        "controlling_value_regex" : "cat-company",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "user", "User" ], [ "building", "Building" ], [ "elephant", "Elephant" ], [ "briefcase", "Briefcase" ], [ "address-card", "Address Card" ], [ "city", "City" ], [ "earth-americas", "Earth Americas" ], [ "earth-oceania", "Earth Oceania" ], [ "earth-europe", "Earth Europe" ], [ "earth-asia", "Earth Asia" ], [ "earth-africa", "Earth Africa" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "elephant"
+    }, {
+      "id" : "acc_sections.left_button.cat_alerts",
+      "name" : "cat_alerts",
+      "display_width" : null,
+      "label" : "Icon (alerts & controls)",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "acc_sections.left_button.lbutton_icon_category",
+        "controlling_value_regex" : "cat-alerts",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "volume", "Volume" ], [ "eye", "Eye" ], [ "eye-lash", "Eye Lash" ], [ "lock", "Lock" ], [ "trash", "Trash" ], [ "circle-exclamation", "Circle Exclamation" ], [ "check", "Check" ], [ "xmark", "XMark" ], [ "plus", "Plus" ], [ "minus", "Minus" ], [ "gear", "Gear" ], [ "square-info", "Square Info" ], [ "square-question", "Square Question" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "volume"
+    }, {
+      "id" : "acc_sections.left_button.link",
+      "name" : "link",
+      "display_width" : null,
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "default" : {
+      "button_label" : "Label",
+      "button_type" : "btn-pri",
+      "button_leading_icon" : true,
+      "show_button" : false,
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }
+  }, {
+    "id" : "acc_sections.right_button",
+    "name" : "right_button",
+    "display_width" : null,
+    "label" : "Right Button",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "acc_sections.right_button.button_label",
+      "name" : "button_label",
+      "display_width" : null,
+      "label" : "Button Label",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Label"
+    }, {
+      "id" : "acc_sections.right_button.button_type",
+      "name" : "button_type",
+      "display_width" : null,
+      "label" : "Button Type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "btn-pri", "Primary" ], [ "btn-pri-inv", "Primary Inverted" ], [ "btn-sec", "Secondary" ], [ "btn-gho", "Ghost" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "btn-pri"
+    }, {
+      "id" : "acc_sections.right_button.button_leading_icon",
+      "name" : "button_leading_icon",
+      "display_width" : null,
+      "label" : "Button Leading Icon",
+      "required" : false,
+      "locked" : false,
+      "display" : "toggle",
+      "type" : "boolean",
+      "default" : true
+    }, {
+      "id" : "acc_sections.right_button.show_button",
+      "name" : "show_button",
+      "display_width" : null,
+      "label" : "Show Button",
+      "required" : false,
+      "locked" : false,
+      "display" : "toggle",
+      "type" : "boolean",
+      "default" : false
+    }, {
+      "id" : "acc_sections.right_button.rbutton_icon_category",
+      "name" : "rbutton_icon_category",
+      "display_width" : null,
+      "label" : "Icon Category",
+      "required" : true,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "cat-arrows", "Arrows & Actions" ], [ "cat-data", "Data" ], [ "cat-editing", "Editing & Files" ], [ "cat-foundations", "Foundations" ], [ "cat-company", "Company" ], [ "cat-alerts", "Alerts & Controls" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "cat-company"
+    }, {
+      "id" : "acc_sections.right_button.cat_arrows",
+      "name" : "cat_arrows",
+      "display_width" : null,
+      "label" : "Icon (arrows & actions)",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "acc_sections.right_button.rbutton_icon_category",
+        "controlling_value_regex" : "cat-arrows",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "arrow-up-right", "Arrow Up Right" ], [ "arrow-up", "Arrow Up" ], [ "arrow-down", "Arrow Down" ], [ "arrow-left", "Arrow Left" ], [ "arrow-right", "Arrow Right" ], [ "arrow-rotate-right", "Arrow Rotate Right" ], [ "arrow-up-right-from-square", "Arrow Up Right From Square" ], [ "arrow-up-from-bracket", "Arrow Up From Bracket" ], [ "arrow-down-to-line", "Arrow Down To Line" ], [ "arrows-rotate", "Arrows Rotate" ], [ "arrows-minimize", "Arrows Minimize" ], [ "arrows-maximize", "Arrows Maximize" ], [ "arrow-up-arrow-down", "Arrow up Arrow Down" ], [ "arrow-right-to-bracket", "Arrow Right To Bracket" ], [ "chevron-up", "Chevron Up" ], [ "chevron-down", "Chevron Down" ], [ "chevron-left", "Chevron Left" ], [ "chevron-right", "Chevron Right" ], [ "copy", "Copy" ], [ "link", "Link" ], [ "filter", "Filter" ], [ "bookmark", "Bookmark" ], [ "share", "Share" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "arrow-up-right"
+    }, {
+      "id" : "acc_sections.right_button.cat_data",
+      "name" : "cat_data",
+      "display_width" : null,
+      "label" : "Icon (data)",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "acc_sections.right_button.rbutton_icon_category",
+        "controlling_value_regex" : "cat-data",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "table", "Table" ], [ "timeline-arrow", "Timeline Arrow" ], [ "file_spreadsheet", "File Spreadsheet" ], [ "database", "Database" ], [ "chart-simple", "Chart Simple" ], [ "cloud", "Cloud" ], [ "cloud-arrow-up", "Cloud Arrow Up" ], [ "calculator", "Calculator" ], [ "percent", "Percent" ], [ "network-wired", "Network Wired" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "table"
+    }, {
+      "id" : "acc_sections.right_button.cat_editing",
+      "name" : "cat_editing",
+      "display_width" : null,
+      "label" : "Icon (editing & files)",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "acc_sections.right_button.rbutton_icon_category",
+        "controlling_value_regex" : "cat-editing",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "file", "File" ], [ "folder", "Folder" ], [ "paperclip", "paperclip" ], [ "file-lines", "File Lines" ], [ "file-pdf", "File pdf" ], [ "list-check", "List Check" ], [ "thumbtack", "Thumbtack" ], [ "pen", "Pen" ], [ "image", "Image" ], [ "pen-to-square", "Pen To Square" ], [ "folder-open", "Foler Open" ], [ "book", "Book" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "file"
+    }, {
+      "id" : "acc_sections.right_button.cat_foundations",
+      "name" : "cat_foundations",
+      "display_width" : null,
+      "label" : "Icon (foundations)",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "acc_sections.right_button.rbutton_icon_category",
+        "controlling_value_regex" : "cat-foundations",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "copyright", "Copyright" ], [ "house", "House" ], [ "magnifying-glass", "Magnifying Glass" ], [ "registered", "Registered" ], [ "phone", "Phone" ], [ "location-dot", "Location Dot" ], [ "phone-volume", "Phone Volume" ], [ "envelope", "Envelope" ], [ "globe", "Globe" ], [ "calendar-days", "Calendar Days" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "copyright"
+    }, {
+      "id" : "acc_sections.right_button.cat_company",
+      "name" : "cat_company",
+      "display_width" : null,
+      "label" : "Icon (company)",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "acc_sections.right_button.rbutton_icon_category",
+        "controlling_value_regex" : "cat-company",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "user", "User" ], [ "building", "Building" ], [ "elephant", "Elephant" ], [ "briefcase", "Briefcase" ], [ "address-card", "Address Card" ], [ "city", "City" ], [ "earth-americas", "Earth Americas" ], [ "earth-oceania", "Earth Oceania" ], [ "earth-europe", "Earth Europe" ], [ "earth-asia", "Earth Asia" ], [ "earth-africa", "Earth Africa" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "elephant"
+    }, {
+      "id" : "acc_sections.right_button.cat_alerts",
+      "name" : "cat_alerts",
+      "display_width" : null,
+      "label" : "Icon (alerts & controls)",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "acc_sections.right_button.rbutton_icon_category",
+        "controlling_value_regex" : "cat-alerts",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "volume", "Volume" ], [ "eye", "Eye" ], [ "eye-lash", "Eye Lash" ], [ "lock", "Lock" ], [ "trash", "Trash" ], [ "circle-exclamation", "Circle Exclamation" ], [ "check", "Check" ], [ "xmark", "XMark" ], [ "plus", "Plus" ], [ "minus", "Minus" ], [ "gear", "Gear" ], [ "square-info", "Square Info" ], [ "square-question", "Square Question" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "volume"
+    }, {
+      "id" : "acc_sections.right_button.link",
+      "name" : "link",
+      "display_width" : null,
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "default" : {
+      "button_label" : "Label",
+      "button_type" : "btn-pri",
+      "button_leading_icon" : true,
+      "show_button" : false,
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : [ {
+    "sec_header_text" : "Section Header",
+    "sec_show_image" : false,
+    "sec_show_subheading" : false,
+    "sec_show_title" : true,
+    "sec_title_text" : "Section Title",
+    "sec_show_caption" : false,
+    "sec_show_body" : true,
+    "sec_body_text" : "Lorem ipsum dolor sit amet consectetur. Ipsum in tortor tortor ac nunc rhoncus. Arcu facilisis nunc nec cras. Amet feugiat sed sit egestas ac tellus duis tortor. Scelerisque feugiat sagittis elementum tellus aliquet faucibus placerat ridiculus nibh. Est nec fermentum pretium amet nullam porta nunc cursus. Aliquet id mauris donec vitae. Platea fringilla at proin vel. Facilisis metus ultrices donec id sit vitae aliquam pulvinar purus. Vel amet amet elementum vestibulum mauris vel commodo ac volutpat.</br></br> Tempus proin varius hendrerit facilisi eu volutpat nulla scelerisque. Lobortis ac quam quis ut. Consectetur mauris vel sit sit cursus. Enim mi arcu placerat maecenas non gravida. A donec auctor tortor sed convallis amet donec euismod. Rhoncus venenatis viverra malesuada risus morbi ornare et. Risus nibh at scelerisque varius egestas adipiscing auctor. Nec in amet maecenas quis ornare ac aenean iaculis mi. Quam aliquet in morbi at. Malesuada morbi eget lacus at ante vel lobortis auctor nunc. Consectetur mattis quis eu in. Posuere orci nibh mi sagittis odio cum. Quis odio felis bibendum nibh quis quis. In in eu in enim tincidunt. Tellus fermentum ut scelerisque enim ac. Elementum odio orci at elit fermentum amet mattis. Tempus scelerisque tristique mi odio aliquet fermentum lectus. Cursus elit fames pellentesque volutpat massa quis risus. Arcu lectus et tempus morbi molestie gravida tempor arcu dapibus. Eu turpis vitae aliquam ornare sed massa tristique. Sem nunc sollicitudin dignissim laoreet eget. Morbi vitae nullam ut nisi feugiat lacus. Ornare id dignissim blandit fermentum varius et habitant ipsum. Tellus vestibulum dignissim vitae sagittis aliquam dictumst. Diam non faucibus egestas enim feugiat. Varius aliquam vitae mauris velit ac faucibus. Adipiscing eros sed quis quis interdum. Ut rhoncus nunc habitasse et. In volutpat nunc integer nulla tortor. Viverra cras non purus id iaculis consectetur id."
+  } ]
+}, {
+  "id" : "acc_version",
+  "name" : "acc_version",
+  "display_width" : null,
+  "label" : "Version",
+  "required" : true,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "acc-v-default", "Default" ], [ "acc-v-spacegrey", "Spaced Grey" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "default" : "acc-v-default"
+} ]

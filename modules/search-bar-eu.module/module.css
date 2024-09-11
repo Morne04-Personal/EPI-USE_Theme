@@ -1,0 +1,111 @@
+/* ---- SEARCH BAR ----*/
+.searchbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width:343px;
+    padding: 0 8px;
+}
+
+.sb-icon-container {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.2s ease;
+}
+
+.sb-icon {
+    font-size: 16px;
+    color: var(--charcoal-black-75);
+}
+
+.sb-bar-container {
+    position: absolute;
+    right: 56px;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width 0.5s ease, background-color 0.5s ease;
+    background-color: transparent;
+}
+
+.sb-input {
+    width: 100%;
+    height: 56px;
+    padding: 0 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--charcoal-black);
+}
+
+.sb-input::placeholder {
+    color: var(--charcoal-black-50);
+}
+
+.searchbar.sb-expanded .sb-bar-container {
+    width: 295px;
+    position: relative;
+    right:auto;
+    
+}
+
+.searchbar.sb-expanded .sb-icon-container,
+.searchbar.sb-expanded .sb-input {
+    background-color: var(--midnight-blue-5);
+}
+
+.searchbar.sb-expanded .sb-icon {
+    color: var(--charcoal-black-50);
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(2px);
+    }
+}
+
+.bouncing .sb-icon {
+    animation: bounce 0.1s ease infinite;
+}
+
+
+@keyframes slide-expand {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes elastic {
+    0% {
+        width: 100%;
+    }
+    50% {
+        width: 105%; 
+    }
+    100% {
+        width: 100%; /* Retract to the target width */
+    }
+}
+
+.sliding {
+    animation: slide-expand 0.3s ease forwards;
+}
+
+.elastic {
+    animation: elastic 0.3s ease forwards;
+}
+
+.sb-icon.fa-arrow-right.arrow-active {
+    color: var(--charcoal-black);
+}

@@ -1,0 +1,75 @@
+<div class="language-switcher">
+    {% for item in module.region %}
+        {% if content.absolute_url is string_containing item.url_field.url.href %}
+            <list-eu-wc 
+                att-show-top-text="false"
+                att-show-caption="false"
+                att-primary-text="{{ item.primary_text }}"
+                att-show-primary-text="true"
+                att-show-bottom-text="false"
+                att-url="{{ item.url_field.url.href }}"
+                att-leading-icon="false"
+                att-trailing-icon="false"
+                att-show-badge="false"
+                att-show-primary-badge="true"
+                att-primary-badge-label="{{ item.badge.badge_label }}"
+                att-primary-badge-type="bdg-mtd"
+                att-primary-badge-show-label="{{ item.badge.badge_show_label }}"
+                att-primary-badge-leading-icon="{{ item.badge.badge_leading_icon }}"
+                att-text-color="--midnight-blue"
+            ></list-eu-wc>
+        {% endif %}
+    {% endfor %}
+</div>
+
+<div class="region-selector-overlay"></div>
+<div class="region-selector">
+    <div class="close clearfix"><i class="fa-solid fa-x"></i></div>
+    <p class="font-h6">{{ module.body_text }}</p>
+    <ul class="regions">
+        {% for item in module.region %}
+            {% for domain in item.domains %}
+                {% if content.absolute_url is string_containing domain.domain_url %}
+                <region-eu-wc 
+                    att-active="false"
+                    att-primary-text="{{ item.primary_text }}"
+                    att-url="{{ item.url_field.url.href }}"
+                    att-badge-label="{{ item.badge.badge_label }}"
+                    att-badge-type="{{ item.badge.badge_type }}"
+                    att-badge-show-label="{{ item.badge.badge_show_label }}"
+                    att-badge-leading-icon="{{ item.badge.badge_leading_icon }}"
+                    att-icon="{{ item.icon }}"
+                    class="{{ name }}-{{ loop.index }}"
+                ></region-eu-wc>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </ul>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('.language-switcher').on('click', function(){
+            $("body").addClass("show-region-selector");
+        });
+
+        $('.region-selector-overlay, .region-selector .close').on('click', function(){
+            $("body").removeClass("show-region-selector");
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        let selectedRegion = '';
+
+        // Add an event listener to each region item
+        document.querySelectorAll('region-eu-wc').forEach(function(regionItem) {
+            regionItem.addEventListener('click', function() {
+                // Update the selected region variable
+                selectedRegion = regionItem.getAttribute('att-primary-text');
+                
+                // Optionally, update the UI to reflect the selected region
+                console.log('Selected Region:', selectedRegion);
+            });
+        });
+    });
+</script>

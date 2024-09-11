@@ -1,0 +1,131 @@
+.accordion{
+    text-decoration:none;
+}
+.accordion h1, .accordion h2, .accordion h3, .accordion h4, .accordion h5, .accordion p{
+    margin: 0;
+}
+
+.accordion-inner{
+   
+}
+
+.acc-sections{
+}
+
+.acc-section{
+    display:flex;
+    margin: 0px var(--margin-lg) var(--margin-lg) var(--margin-lg);
+}
+
+
+.acc-section-header-number{
+    padding: var(--padding-md) var(--padding-lg);
+    flex: 0 0 auto; /*flex-grow: 0; flex-shrink: 0; flex-basis: auto;*/
+}
+.acc-sec-h-nbr-text{
+    font-family: var(--body-semibold-font-family);
+    font-size: var(--body-semibold-font-size);
+    font-weight: var(--body-semibold-font-weight);
+    line-height: var(--body-semibold-line-height);
+    margin: var(--margin-sm) 0px;
+}
+
+.acc-section-inner{
+    flex: 1;
+}
+.acc-section-header{
+    cursor:pointer;
+    display:flex;
+    justify-content: space-between;
+    border-bottom: 0.5px solid var(--midnight-blue-10);
+    padding: var(--padding-md) 0px;
+
+}
+.acc-section-header-title{
+    padding: var(--padding-sm) var(--padding-md);
+}
+.acc-section-header-title .acc-sec-h-ttl-text{
+    font-family: var(--body-semibold-font-family);
+    font-size: var(--body-semibold-font-size);
+    font-weight: var(--body-semibold-font-weight);
+    line-height: var(--body-semibold-line-height);
+}
+.acc-section-header-icon{
+    font-size: var(--body-semibold-font-size);
+    display:flex;
+    align-items: center;
+    padding: 0px var(--padding-lg);
+    margin-left: auto;
+}
+.acc-section-header-icon .acc-sec-h-ico-up{
+    display:none;
+}
+.acc-section-header-icon .acc-sec-h-ico-dwn{
+    display:block;
+}
+
+.acc-section-content{
+    display:none;
+    border-bottom: 0.5px solid var(--midnight-blue-25);
+}
+.acc-sec-cont-inner{
+    
+}
+.acc-space-right{
+    margin-right: 84px;
+    border-right: 0.5px solid var(--midnight-blue-10);
+}
+
+.acc-section-content-text{
+    padding: var(--padding-lg);
+}
+
+.acc-section-content .sec-subheading-text{
+    font-family: var(--h2-font-family);
+    font-size: var(--h2-font-size);
+    font-weight: var(--h2-font-weight);
+    line-height: var(--h2-line-height);
+    color: var(--midnight-blue);
+}
+
+.acc-section-content .sec-title-text{
+    font-family: var(--h3-font-family);
+    font-size: var(--h3-font-size);
+    font-weight: var(--h3-font-weight);
+    line-height: var(--h3-line-height);
+    padding-top: var(--padding-md);
+    color: var(--midnight-blue);
+
+}
+
+.acc-section-content .sec-caption-text{
+    font-family: var(--caption-semibold-font-family);
+    font-size: var(--caption-semibold-font-size);
+    font-weight: var(--caption-semibold-font-weight);
+    line-height: var(--caption-semibold-line-height);
+    padding-top: var(--padding-sm);
+    color: var(--midnight-blue);
+}
+
+.acc-section-content .sec-body-text{
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size);
+    font-weight: var(--body-font-weight);
+    line-height: var(--body-line-height);
+    padding-top: var(--padding-md);
+    color: var(--charcoal-black);
+}
+
+
+.acc-section-content-buttons{
+
+  display: flex;
+  justify-content: flex-end;
+}
+.hs-buttons-inner{
+  display: flex;/*<!-- Note add 'display: flex' to container if multiple web components are next to each other to remove white space between them -->*/
+} 
+
+.acc-section-header, .acc-section-content {
+    transition: background-color 1s;
+}

@@ -1,0 +1,16 @@
+
+.logo-container{
+  display: flex;
+}
+
+.logo-container.align-right {
+  justify-content: flex-end;
+}
+.logo-container.align-center {
+  justify-content: center;
+}
+
+.logo .image img {
+    height: 103.03px;
+    width: 399.71px;
+}

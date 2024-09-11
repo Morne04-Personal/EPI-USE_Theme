@@ -1,0 +1,39 @@
+<!--
+  templateType: section
+  label: Pull Quote
+  isAvailableForNewContent: true
+  description: "Full size background color section separated in three columns with with an image and text in each."
+-->
+
+<!-- Begin partial -->
+{% dnd_section 
+background_color='#f2f3f6',
+background_image={
+        'backgroundPosition': 'MIDDLE_CENTER',
+        'backgroundSize': 'cover',
+        'imageUrl': 'https://epiuse.com/hubfs/cityscape%201.png'
+      },
+padding={'top': 64, 'bottom': 330, 'left': 16, 'right': 16},
+max_width=1000,
+full_width = false
+%}
+  {% dnd_column width=12 %}
+    {% dnd_row %}
+      {% dnd_module 
+      'pull quotes' 
+      path='../modules/pull-quote-eu.module'
+      pq_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. At sit erat ac vitae platea. Aliquam vulputate erat aliquet sit volutpat blandit proin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. At sit erat ac vitae platea. Aliquam vulputate erat aliquet sit volutpat blandit proin."
+      pq_author="Mark Smith"
+      pq_author_title="CEO & Founder"
+      pq_client_logo={
+        "src": "https://epiuse.com/hs-fs/hubfs/00-EPI-USE/09-AWS/Success-Stories/aws-client-nxtsoft-logo-1.png?width=155&height=45&name=aws-client-nxtsoft-logo-1.png"
+      },
+      pq_background="pq-transparent"
+      pq_orientation="pq-horizontal"
+    %}{% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+
+
+{% end_dnd_section %}
+<!-- End partial -->

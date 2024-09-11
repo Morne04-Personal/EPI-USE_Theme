@@ -1,0 +1,38 @@
+<!--
+  templateType: section
+  label: Call to Action
+  isAvailableForNewContent: true
+  description: "Full size background color section separated in three columns with with an image and text in each."
+-->
+
+<!-- Begin partial -->
+{% dnd_section 
+background_color='#f2f3f6',
+padding={'top': 64, 'bottom': 64, 'left': 16, 'right': 16},
+max_width=1200,
+full_width = false
+%}
+  {% dnd_column width=8 %}
+    {% dnd_row %}
+      {% dnd_module 'section-header' 
+        path='../modules/section-header-eu.module' 
+        show_subtext=false
+        heading="Heading"
+        body_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend, tortor nec feugiat eleifend, ex ligula ornare risus, ut elementum libero mauris vel ipsum. "
+      %}{% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% dnd_column width=4, offset=8 %}
+    {% dnd_row %}
+      {% dnd_module 'button-arrow' 
+        path='../modules/button-arrow-eu.module' 
+        button_label="Button"
+        button_type="btn-sec"
+        orientation="btn-vertical"
+        ba_align_button="CENTER"
+      %}{% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+
+{% end_dnd_section %}
+<!-- End partial -->

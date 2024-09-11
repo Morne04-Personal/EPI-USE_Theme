@@ -1,0 +1,41 @@
+.hubdb-eu {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(412px, 1fr));
+  gap: 8px;
+}
+
+.hdb-title-text.ac-heading-text{
+  overflow: hidden;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; 
+  text-overflow: ellipsis;
+}
+.hdb-date.ac-date{
+
+}
+.hdb-field1-text.ac-title{
+  overflow: hidden;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; 
+  text-overflow: ellipsis;
+}
+.hdb-field2-text.ac-body-text{
+  overflow: hidden;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; 
+  text-overflow: ellipsis;
+}
+.hdb-field3-text.ac-body-text{
+  overflow: hidden;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; 
+  text-overflow: ellipsis;
+}

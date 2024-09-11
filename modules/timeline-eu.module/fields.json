@@ -1,0 +1,269 @@
+[ 
+{
+    "id" : "timeline_item",
+    "name" : "timeline_item",
+    "display_width" : null,
+    "label" : "Timeline Item",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 1
+    },
+    "children" : [    
+      {
+        "id" : "timeline_item.timeline_date",
+        "name" : "timeline_date",
+        "display_width" : null,
+        "label" : "Timeline Date",
+        "required" : false,
+        "locked" : false,
+        "validation_regex" : "",
+        "allow_new_line" : false,
+        "show_emoji_picker" : false,
+        "type" : "text",
+        "default" : "2017"
+      },
+      {
+        "id" : "a8f70a6a-4cb3-0b01-2cce-0ddee5b42c45",
+        "name" : "show_subtext",
+        "display_width" : null,
+        "label" : "Show Subtext",
+        "required" : false,
+        "locked" : false,
+        "display" : "toggle",
+        "type" : "boolean",
+        "default" : true
+      }, {
+        "id" : "af640b6a-fd62-9375-6941-4bbb4fd4490f",
+        "name" : "subtext",
+        "display_width" : null,
+        "label" : "Subtext",
+        "required" : false,
+        "locked" : false,
+        "validation_regex" : "",
+        "allow_new_line" : false,
+        "show_emoji_picker" : false,
+        "type" : "text",
+        "default" : "Subtext"
+      }, {
+        "id" : "098c5df6-a1ca-47f5-b439-dd85866d924b",
+        "name" : "show_heading",
+        "display_width" : null,
+        "label" : "Show Heading",
+        "required" : false,
+        "locked" : false,
+        "display" : "toggle",
+        "type" : "boolean",
+        "default" : true
+      }, {
+        "id" : "20f3d338-d094-2ab8-837e-b82fb7d69d59",
+        "name" : "heading",
+        "display_width" : null,
+        "label" : "Heading",
+        "required" : false,
+        "locked" : false,
+        "validation_regex" : "",
+        "allow_new_line" : false,
+        "show_emoji_picker" : false,
+        "type" : "text",
+        "default" : "Heading"
+      },
+      {
+        "id" : "show_sub_heading",
+        "name" : "show_sub_heading",
+        "display_width" : null,
+        "label" : "Show Sub Heading",
+        "required" : false,
+        "locked" : false,
+        "display" : "toggle",
+        "type" : "boolean",
+        "default" : true
+      }, {
+        "id" : "sub_heading",
+        "name" : "sub_heading",
+        "display_width" : null,
+        "label" : "Heading",
+        "required" : false,
+        "locked" : false,
+        "validation_regex" : "",
+        "allow_new_line" : false,
+        "show_emoji_picker" : false,
+        "type" : "text",
+        "default" : "Sub Heading"
+      }, {
+        "id" : "d0d94784-8933-5f2c-f28b-e8f1ca752e27",
+        "name" : "show_body",
+        "display_width" : null,
+        "label" : "Show Body",
+        "required" : false,
+        "locked" : false,
+        "display" : "toggle",
+        "type" : "boolean",
+        "default" : true
+      }, {
+        "id" : "84348a98-8c27-435c-998b-b0f2f2e526b1",
+        "name" : "body_text",
+        "display_width" : null,
+        "label" : "Body Text",
+        "required" : false,
+        "locked" : false,
+        "validation_regex" : "",
+        "allow_new_line" : false,
+        "show_emoji_picker" : false,
+        "type" : "text",
+        "default" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend, tortor nec feugiat eleifend, ex ligula ornare risus, ut elementum libero mauris vel ipsum. "
+      }, {
+        "id" : "align",
+        "name" : "align",
+        "display_width" : null,
+        "label" : "Align",
+        "required" : false,
+        "locked" : false,
+        "display" : "select",
+        "choices" : [ [ "align-right", "Right" ], [ "align-center", "Center" ], [ "align-left", "Left" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "default" : "align-left"
+      }],
+      "default" : [ {
+        "timeline_date":"2017",
+        "show_subtext":true,
+        "subtext":"Subtext",
+        "show_heading": true,
+        "heading":"Heading",
+        "show_sub_heading":true,
+        "sub_heading":"Subheading",
+        "show_body":true,
+        "body_text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend, tortor nec feugiat eleifend, ex ligula ornare risus, ut elementum libero mauris vel ipsum. "
+      },
+      {
+        "timeline_date":"2018",
+        "show_subtext":true,
+        "subtext":"Subtext",
+        "show_heading": true,
+        "heading":"Heading",
+        "show_sub_heading":true,
+        "sub_heading":"Subheading",
+        "show_body":true,
+        "body_text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend, tortor nec feugiat eleifend, ex ligula ornare risus, ut elementum libero mauris vel ipsum. "
+      },
+      {
+        "timeline_date":"2019",
+        "show_subtext":true,
+        "subtext":"Subtext",
+        "show_heading": true,
+        "heading":"Heading",
+        "show_sub_heading":true,
+        "sub_heading":"Subheading",
+        "show_body":true,
+        "body_text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend, tortor nec feugiat eleifend, ex ligula ornare risus, ut elementum libero mauris vel ipsum. "
+      },
+      {
+        "timeline_date":"2020",
+        "show_subtext":true,
+        "subtext":"Subtext",
+        "show_heading": true,
+        "heading":"Heading",
+        "show_sub_heading":true,
+        "sub_heading":"Subheading",
+        "show_body":true,
+        "body_text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend, tortor nec feugiat eleifend, ex ligula ornare risus, ut elementum libero mauris vel ipsum. "
+      },
+      {
+        "timeline_date":"2021",
+        "show_subtext":true,
+        "subtext":"Subtext",
+        "show_heading": true,
+        "heading":"Heading",
+        "show_sub_heading":true,
+        "sub_heading":"Subheading",
+        "show_body":true,
+        "body_text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend, tortor nec feugiat eleifend, ex ligula ornare risus, ut elementum libero mauris vel ipsum. "
+      },
+      {
+        "timeline_date":"2022",
+        "show_subtext":true,
+        "subtext":"Subtext",
+        "show_heading": true,
+        "heading":"Heading",
+        "show_sub_heading":true,
+        "sub_heading":"Subheading",
+        "show_body":true,
+        "body_text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend, tortor nec feugiat eleifend, ex ligula ornare risus, ut elementum libero mauris vel ipsum. "
+      },
+      {
+        "timeline_date":"2023",
+        "show_subtext":true,
+        "subtext":"Subtext",
+        "show_heading": true,
+        "heading":"Heading",
+        "show_sub_heading":true,
+        "sub_heading":"Subheading",
+        "show_body":true,
+        "body_text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend, tortor nec feugiat eleifend, ex ligula ornare risus, ut elementum libero mauris vel ipsum. "
+      },
+      {
+        "timeline_date":"2024",
+        "show_subtext":true,
+        "subtext":"Subtext",
+        "show_heading": true,
+        "heading":"Heading",
+        "show_sub_heading":true,
+        "sub_heading":"Subheading",
+        "show_body":true,
+        "body_text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend, tortor nec feugiat eleifend, ex ligula ornare risus, ut elementum libero mauris vel ipsum. "
+      },
+      {
+        "timeline_date":"2025",
+        "show_subtext":true,
+        "subtext":"Subtext",
+        "show_heading": true,
+        "heading":"Heading",
+        "show_sub_heading":true,
+        "sub_heading":"Subheading",
+        "show_body":true,
+        "body_text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend, tortor nec feugiat eleifend, ex ligula ornare risus, ut elementum libero mauris vel ipsum. "
+      },
+      {
+        "timeline_date":"2026",
+        "show_subtext":true,
+        "subtext":"Subtext",
+        "show_heading": true,
+        "heading":"Heading",
+        "show_sub_heading":true,
+        "sub_heading":"Subheading",
+        "show_body":true,
+        "body_text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend, tortor nec feugiat eleifend, ex ligula ornare risus, ut elementum libero mauris vel ipsum. "
+      },
+      {
+        "timeline_date":"2027",
+        "show_subtext":true,
+        "subtext":"Subtext",
+        "show_heading": true,
+        "heading":"Heading",
+        "show_sub_heading":true,
+        "sub_heading":"Subheading",
+        "show_body":true,
+        "body_text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend, tortor nec feugiat eleifend, ex ligula ornare risus, ut elementum libero mauris vel ipsum. "
+      }
+    ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group"
+  }, {
+    "name" : "tl_vertical",
+    "display_width" : null,
+    "label" : "Vertical Timeline",
+    "required" : true,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : true
+  }
+]

@@ -1,0 +1,1054 @@
+[ 
+  {
+    "id" : "hsc_slide",
+    "name" : "hsc_slide",
+    "display_width" : null,
+    "label" : "HeroSlide",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 1,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 1
+    },
+    "children" : [ 
+      {
+        "id" : "hsc_slide.hsc_mobile_image_placement",
+        "name" : "hsc_mobile_image_placement",
+        "display_width" : null,
+        "label" : "Type",
+        "required" : true,
+        "locked" : false,
+        "display" : "select",
+        "choices" : [ [ "leading", "Leading" ], [ "trailing", "Trailing" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "default" : "leading"
+      },
+
+      {
+        "id" : "hsc_slide.hsc_heading_text",
+        "name" : "hsc_heading_text",
+        "display_width" : null,
+        "label" : "Heading Text",
+        "required" : true,
+        "locked" : false,
+        "validation_regex" : "",
+        "placeholder" : "Heading",
+        "allow_new_line" : false,
+        "show_emoji_picker" : false,
+        "type" : "text",
+        "default" : "Heading"
+      }, {
+        "id" : "hsc_slide.hsc_title",
+        "name" : "hsc_title",
+        "display_width" : null,
+        "label" : "Title",
+        "required" : false,
+        "locked" : false,
+        "validation_regex" : "",
+        "placeholder" : "Title",
+        "allow_new_line" : false,
+        "show_emoji_picker" : false,
+        "type" : "text",
+        "default" : "Unparalleled HR and Payroll expertise that stands out from the rest."
+      }, {
+        "id" : "hsc_slide.hsc_body_text",
+        "name" : "hsc_body_text",
+        "display_width" : null,
+        "label" : "Body Text",
+        "required" : false,
+        "locked" : false,
+        "validation_regex" : "",
+        "validation_error_message" : "",
+        "allow_new_line" : false,
+        "show_emoji_picker" : false,
+        "type" : "text",
+        "default" : "Lorem ipsum dolor sit amet consectetur. Rutrum pellentesque justo sed neque ipsum feugiat semper urna. Varius semper malesuada volutpat blandit dis. Varius semper malesuada volutpat blandit dis."
+      }, {
+        "id" : "hsc_slide.hsc_type",
+        "name" : "hsc_type",
+        "display_width" : null,
+        "label" : "Type",
+        "required" : true,
+        "locked" : false,
+        "display" : "select",
+        "choices" : [ [ "hs-branded", "Branded" ], [ "hs-text-image", "Text On Image" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "default" : "hs-branded"
+      }, {
+        "id" : "hsc_slide.hsc_color",
+        "name" : "hsc_color",
+        "display_width" : null,
+        "label" : "Color",
+        "required" : true,
+        "locked" : false,
+        "display" : "select",
+        "choices" : [ [ "hs-midnight-blue", "Midnight Blue" ], [ "hs-pure-white", "Pure White" ], [ "hs-transparent", "Transparent" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "default" : "hs-midnight-blue"
+      }, {
+        "id" : "hsc_slide.hsc_hero_image",
+        "name" : "hsc_hero_image",
+        "display_width" : null,
+        "label" : "Hero Image",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "hsc_slide.hsc_type",
+          "controlling_value_regex" : "hs-text-image",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "responsive" : true,
+        "resizable" : true,
+        "show_loading" : false,
+        "type" : "image",
+        "default" : {
+          "size_type" : "auto_custom_max",
+          "src" : "https://2930497.fs1.hubspotusercontent-na1.net/hubfs/2930497/ac-03-1.jpeg",
+          "alt" : "whale",
+          "loading" : "lazy",
+          "width" : 1920,
+          "height" : 720,
+          "max_width" : 1920,
+          "max_height" : 720
+        }
+      }, {
+        "id" : "hsc_slide.show_buttons",
+        "name" : "show_buttons",
+        "display_width" : null,
+        "label" : "Show Buttons",
+        "required" : false,
+        "locked" : false,
+        "display" : "toggle",
+        "type" : "boolean",
+        "default" : true
+      }, {
+        "id" : "hsc_slide.left_button",
+        "name" : "left_button",
+        "display_width" : null,
+        "label" : "Left Button",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "hsc_slide.show_buttons",
+          "controlling_value_regex" : "true",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "children" : [ 
+          {
+            "id" : "hsc_slide.left_button.button_label",
+            "name" : "button_label",
+            "display_width" : null,
+            "label" : "Button Label",
+            "required" : false,
+            "locked" : false,
+            "validation_regex" : "",
+            "allow_new_line" : false,
+            "show_emoji_picker" : false,
+            "type" : "text",
+            "default" : "Label"
+          }, {
+            "id" : "hsc_slide.left_button.button_type",
+            "name" : "button_type",
+            "display_width" : null,
+            "label" : "Button Type",
+            "required" : false,
+            "locked" : false,
+            "display" : "select",
+            "choices" : [ [ "btn-pri", "Primary" ], [ "btn-pri-inv", "Primary Inverted" ], [ "btn-sec", "Secondary" ], [ "btn-gho", "Ghost" ] ],
+            "multiple" : false,
+            "reordering_enabled" : true,
+            "preset" : null,
+            "type" : "choice",
+            "default" : "btn-sec"
+          }, {
+            "id" : "hsc_slide.left_button.button_leading_icon",
+            "name" : "button_leading_icon",
+            "display_width" : null,
+            "label" : "Button Leading Icon",
+            "required" : false,
+            "locked" : false,
+            "display" : "toggle",
+            "type" : "boolean",
+            "default" : true
+          }, {
+            "id" : "hsc_slide.left_button.lbutton_icon_category",
+            "name" : "lbutton_icon_category",
+            "display_width" : null,
+            "label" : "Icon Category",
+            "required" : true,
+            "locked" : false,
+            "display" : "select",
+            "choices" : [ [ "cat-arrows", "Arrows & Actions" ], [ "cat-data", "Data" ], [ "cat-editing", "Editing & Files" ], [ "cat-foundations", "Foundations" ], [ "cat-company", "Company" ], [ "cat-alerts", "Alerts & Controls" ] ],
+            "multiple" : false,
+            "reordering_enabled" : true,
+            "preset" : null,
+            "type" : "choice",
+            "default" : "cat-company"
+          }, {
+            "id" : "hsc_slide.left_button.cat_arrows",
+            "name" : "cat_arrows",
+            "display_width" : null,
+            "label" : "Icon (arrows & actions)",
+            "required" : false,
+            "locked" : false,
+            "visibility" : {
+              "controlling_field" : null,
+              "controlling_field_path" : "hsc_slide.left_button.lbutton_icon_category",
+              "controlling_value_regex" : "cat-arrows",
+              "property" : null,
+              "operator" : "EQUAL",
+              "access" : null
+            },
+            "display" : "select",
+            "choices" : [ [ "arrow-up-right", "Arrow Up Right" ], [ "arrow-up", "Arrow Up" ], [ "arrow-down", "Arrow Down" ], [ "arrow-left", "Arrow Left" ], [ "arrow-right", "Arrow Right" ], [ "arrow-rotate-right", "Arrow Rotate Right" ], [ "arrow-up-right-from-square", "Arrow Up Right From Square" ], [ "arrow-up-from-bracket", "Arrow Up From Bracket" ], [ "arrow-down-to-line", "Arrow Down To Line" ], [ "arrows-rotate", "Arrows Rotate" ], [ "arrows-minimize", "Arrows Minimize" ], [ "arrows-maximize", "Arrows Maximize" ], [ "arrow-up-arrow-down", "Arrow up Arrow Down" ], [ "arrow-right-to-bracket", "Arrow Right To Bracket" ], [ "chevron-up", "Chevron Up" ], [ "chevron-down", "Chevron Down" ], [ "chevron-left", "Chevron Left" ], [ "chevron-right", "Chevron Right" ], [ "copy", "Copy" ], [ "link", "Link" ], [ "filter", "Filter" ], [ "bookmark", "Bookmark" ], [ "share", "Share" ] ],
+            "multiple" : false,
+            "reordering_enabled" : true,
+            "preset" : null,
+            "type" : "choice",
+            "default" : "arrow-up-right"
+          }, {
+            "id" : "hsc_slide.left_button.cat_data",
+            "name" : "cat_data",
+            "display_width" : null,
+            "label" : "Icon (data)",
+            "required" : false,
+            "locked" : false,
+            "visibility" : {
+              "controlling_field" : null,
+              "controlling_field_path" : "hsc_slide.left_button.lbutton_icon_category",
+              "controlling_value_regex" : "cat-data",
+              "property" : null,
+              "operator" : "EQUAL",
+              "access" : null
+            },
+            "display" : "select",
+            "choices" : [ [ "table", "Table" ], [ "timeline-arrow", "Timeline Arrow" ], [ "file_spreadsheet", "File Spreadsheet" ], [ "database", "Database" ], [ "chart-simple", "Chart Simple" ], [ "cloud", "Cloud" ], [ "cloud-arrow-up", "Cloud Arrow Up" ], [ "calculator", "Calculator" ], [ "percent", "Percent" ], [ "network-wired", "Network Wired" ] ],
+            "multiple" : false,
+            "reordering_enabled" : true,
+            "preset" : null,
+            "type" : "choice",
+            "default" : "table"
+          }, {
+            "id" : "hsc_slide.left_button.cat_editing",
+            "name" : "cat_editing",
+            "display_width" : null,
+            "label" : "Icon (editing & files)",
+            "required" : false,
+            "locked" : false,
+            "visibility" : {
+              "controlling_field" : null,
+              "controlling_field_path" : "hsc_slide.left_button.lbutton_icon_category",
+              "controlling_value_regex" : "cat-editing",
+              "property" : null,
+              "operator" : "EQUAL",
+              "access" : null
+            },
+            "display" : "select",
+            "choices" : [ [ "file", "File" ], [ "folder", "Folder" ], [ "paperclip", "paperclip" ], [ "file-lines", "File Lines" ], [ "file-pdf", "File pdf" ], [ "list-check", "List Check" ], [ "thumbtack", "Thumbtack" ], [ "pen", "Pen" ], [ "image", "Image" ], [ "pen-to-square", "Pen To Square" ], [ "folder-open", "Foler Open" ], [ "book", "Book" ] ],
+            "multiple" : false,
+            "reordering_enabled" : true,
+            "preset" : null,
+            "type" : "choice",
+            "default" : "file"
+          }, {
+            "id" : "hsc_slide.left_button.cat_foundations",
+            "name" : "cat_foundations",
+            "display_width" : null,
+            "label" : "Icon (foundations)",
+            "required" : false,
+            "locked" : false,
+            "visibility" : {
+              "controlling_field" : null,
+              "controlling_field_path" : "hsc_slide.left_button.lbutton_icon_category",
+              "controlling_value_regex" : "cat-foundations",
+              "property" : null,
+              "operator" : "EQUAL",
+              "access" : null
+            },
+            "display" : "select",
+            "choices" : [ [ "copyright", "Copyright" ], [ "house", "House" ], [ "magnifying-glass", "Magnifying Glass" ], [ "registered", "Registered" ], [ "phone", "Phone" ], [ "location-dot", "Location Dot" ], [ "phone-volume", "Phone Volume" ], [ "envelope", "Envelope" ], [ "globe", "Globe" ], [ "calendar-days", "Calendar Days" ] ],
+            "multiple" : false,
+            "reordering_enabled" : true,
+            "preset" : null,
+            "type" : "choice",
+            "default" : "copyright"
+          }, {
+            "id" : "hsc_slide.left_button.cat_company",
+            "name" : "cat_company",
+            "display_width" : null,
+            "label" : "Icon (company)",
+            "required" : false,
+            "locked" : false,
+            "visibility" : {
+              "controlling_field" : null,
+              "controlling_field_path" : "hsc_slide.left_button.lbutton_icon_category",
+              "controlling_value_regex" : "cat-company",
+              "property" : null,
+              "operator" : "EQUAL",
+              "access" : null
+            },
+            "display" : "select",
+            "choices" : [ [ "user", "User" ], [ "building", "Building" ], [ "elephant", "Elephant" ], [ "briefcase", "Briefcase" ], [ "address-card", "Address Card" ], [ "city", "City" ], [ "earth-americas", "Earth Americas" ], [ "earth-oceania", "Earth Oceania" ], [ "earth-europe", "Earth Europe" ], [ "earth-asia", "Earth Asia" ], [ "earth-africa", "Earth Africa" ] ],
+            "multiple" : false,
+            "reordering_enabled" : true,
+            "preset" : null,
+            "type" : "choice",
+            "default" : "elephant"
+          }, {
+            "id" : "hsc_slide.left_button.cat_alerts",
+            "name" : "cat_alerts",
+            "display_width" : null,
+            "label" : "Icon (alerts & controls)",
+            "required" : false,
+            "locked" : false,
+            "visibility" : {
+              "controlling_field" : null,
+              "controlling_field_path" : "hsc_slide.left_button.lbutton_icon_category",
+              "controlling_value_regex" : "cat-alerts",
+              "property" : null,
+              "operator" : "EQUAL",
+              "access" : null
+            },
+            "display" : "select",
+            "choices" : [ [ "volume", "Volume" ], [ "eye", "Eye" ], [ "eye-lash", "Eye Lash" ], [ "lock", "Lock" ], [ "trash", "Trash" ], [ "circle-exclamation", "Circle Exclamation" ], [ "check", "Check" ], [ "xmark", "XMark" ], [ "plus", "Plus" ], [ "minus", "Minus" ], [ "gear", "Gear" ], [ "square-info", "Square Info" ], [ "square-question", "Square Question" ] ],
+            "multiple" : false,
+            "reordering_enabled" : true,
+            "preset" : null,
+            "type" : "choice",
+            "default" : "volume"
+          }, {
+            "id" : "hsc_slide.left_button.link",
+            "name" : "link",
+            "display_width" : null,
+            "label" : "Link",
+            "required" : false,
+            "locked" : false,
+            "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+            "show_advanced_rel_options" : false,
+            "type" : "link",
+            "default" : {
+              "url" : {
+                "content_id" : null,
+                "type" : "EXTERNAL",
+                "href" : ""
+              },
+              "open_in_new_tab" : false,
+              "no_follow" : false
+            }
+          } 
+        ],
+        "tab" : "CONTENT",
+        "expanded" : false,
+        "group_occurrence_meta" : null,
+        "type" : "group",
+        "default" : {
+          "button_label" : "Label",
+          "button_type" : "btn-sec",
+          "button_leading_icon" : true,
+          "lbutton_icon_category" : "cat-company",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        }
+      }, {
+        "id" : "hsc_slide.right_button",
+        "name" : "right_button",
+        "display_width" : null,
+        "label" : "Right Button",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "hsc_slide.show_buttons",
+          "controlling_value_regex" : "true",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "children" : [ 
+          {
+            "id" : "hsc_slide.right_button.button_label",
+            "name" : "button_label",
+            "display_width" : null,
+            "label" : "Button Label",
+            "required" : false,
+            "locked" : false,
+            "validation_regex" : "",
+            "allow_new_line" : false,
+            "show_emoji_picker" : false,
+            "type" : "text",
+            "default" : "Label"
+          }, {
+            "id" : "hsc_slide.right_button.button_type",
+            "name" : "button_type",
+            "display_width" : null,
+            "label" : "Button Type",
+            "required" : false,
+            "locked" : false,
+            "display" : "select",
+            "choices" : [ [ "btn-pri", "Primary" ], [ "btn-pri-inv", "Primary Inverted" ], [ "btn-sec", "Secondary" ], [ "btn-gho", "Ghost" ] ],
+            "multiple" : false,
+            "reordering_enabled" : true,
+            "preset" : null,
+            "type" : "choice",
+            "default" : "btn-pri"
+          }, {
+            "id" : "hsc_slide.right_button.button_leading_icon",
+            "name" : "button_leading_icon",
+            "display_width" : null,
+            "label" : "Button Leading Icon",
+            "required" : false,
+            "locked" : false,
+            "display" : "toggle",
+            "type" : "boolean",
+            "default" : true
+          }, {
+            "id" : "hsc_slide.right_button.show_button",
+            "name" : "show_button",
+            "display_width" : null,
+            "label" : "Show Button",
+            "required" : false,
+            "locked" : false,
+            "display" : "toggle",
+            "type" : "boolean",
+            "default" : true
+          }, {
+            "id" : "hsc_slide.right_button.rbutton_icon_category",
+            "name" : "rbutton_icon_category",
+            "display_width" : null,
+            "label" : "Icon Category",
+            "required" : true,
+            "locked" : false,
+            "display" : "select",
+            "choices" : [ [ "cat-arrows", "Arrows & Actions" ], [ "cat-data", "Data" ], [ "cat-editing", "Editing & Files" ], [ "cat-foundations", "Foundations" ], [ "cat-company", "Company" ], [ "cat-alerts", "Alerts & Controls" ] ],
+            "multiple" : false,
+            "reordering_enabled" : true,
+            "preset" : null,
+            "type" : "choice",
+            "default" : "cat-company"
+          }, {
+            "id" : "hsc_slide.right_button.cat_arrows",
+            "name" : "cat_arrows",
+            "display_width" : null,
+            "label" : "Icon (arrows & actions)",
+            "required" : false,
+            "locked" : false,
+            "visibility" : {
+              "controlling_field" : null,
+              "controlling_field_path" : "hsc_slide.right_button.rbutton_icon_category",
+              "controlling_value_regex" : "cat-arrows",
+              "property" : null,
+              "operator" : "EQUAL",
+              "access" : null
+            },
+            "display" : "select",
+            "choices" : [ [ "arrow-up-right", "Arrow Up Right" ], [ "arrow-up", "Arrow Up" ], [ "arrow-down", "Arrow Down" ], [ "arrow-left", "Arrow Left" ], [ "arrow-right", "Arrow Right" ], [ "arrow-rotate-right", "Arrow Rotate Right" ], [ "arrow-up-right-from-square", "Arrow Up Right From Square" ], [ "arrow-up-from-bracket", "Arrow Up From Bracket" ], [ "arrow-down-to-line", "Arrow Down To Line" ], [ "arrows-rotate", "Arrows Rotate" ], [ "arrows-minimize", "Arrows Minimize" ], [ "arrows-maximize", "Arrows Maximize" ], [ "arrow-up-arrow-down", "Arrow up Arrow Down" ], [ "arrow-right-to-bracket", "Arrow Right To Bracket" ], [ "chevron-up", "Chevron Up" ], [ "chevron-down", "Chevron Down" ], [ "chevron-left", "Chevron Left" ], [ "chevron-right", "Chevron Right" ], [ "copy", "Copy" ], [ "link", "Link" ], [ "filter", "Filter" ], [ "bookmark", "Bookmark" ], [ "share", "Share" ] ],
+            "multiple" : false,
+            "reordering_enabled" : true,
+            "preset" : null,
+            "type" : "choice",
+            "default" : "arrow-up-right"
+          }, {
+            "id" : "hsc_slide.right_button.cat_data",
+            "name" : "cat_data",
+            "display_width" : null,
+            "label" : "Icon (data)",
+            "required" : false,
+            "locked" : false,
+            "visibility" : {
+              "controlling_field" : null,
+              "controlling_field_path" : "hsc_slide.right_button.rbutton_icon_category",
+              "controlling_value_regex" : "cat-data",
+              "property" : null,
+              "operator" : "EQUAL",
+              "access" : null
+            },
+            "display" : "select",
+            "choices" : [ [ "table", "Table" ], [ "timeline-arrow", "Timeline Arrow" ], [ "file_spreadsheet", "File Spreadsheet" ], [ "database", "Database" ], [ "chart-simple", "Chart Simple" ], [ "cloud", "Cloud" ], [ "cloud-arrow-up", "Cloud Arrow Up" ], [ "calculator", "Calculator" ], [ "percent", "Percent" ], [ "network-wired", "Network Wired" ] ],
+            "multiple" : false,
+            "reordering_enabled" : true,
+            "preset" : null,
+            "type" : "choice",
+            "default" : "table"
+          }, {
+            "id" : "hsc_slide.right_button.cat_editing",
+            "name" : "cat_editing",
+            "display_width" : null,
+            "label" : "Icon (editing & files)",
+            "required" : false,
+            "locked" : false,
+            "visibility" : {
+              "controlling_field" : null,
+              "controlling_field_path" : "hsc_slide.right_button.rbutton_icon_category",
+              "controlling_value_regex" : "cat-editing",
+              "property" : null,
+              "operator" : "EQUAL",
+              "access" : null
+            },
+            "display" : "select",
+            "choices" : [ [ "file", "File" ], [ "folder", "Folder" ], [ "paperclip", "paperclip" ], [ "file-lines", "File Lines" ], [ "file-pdf", "File pdf" ], [ "list-check", "List Check" ], [ "thumbtack", "Thumbtack" ], [ "pen", "Pen" ], [ "image", "Image" ], [ "pen-to-square", "Pen To Square" ], [ "folder-open", "Foler Open" ], [ "book", "Book" ] ],
+            "multiple" : false,
+            "reordering_enabled" : true,
+            "preset" : null,
+            "type" : "choice",
+            "default" : "file"
+          }, {
+            "id" : "hsc_slide.right_button.cat_foundations",
+            "name" : "cat_foundations",
+            "display_width" : null,
+            "label" : "Icon (foundations)",
+            "required" : false,
+            "locked" : false,
+            "visibility" : {
+              "controlling_field" : null,
+              "controlling_field_path" : "hsc_slide.right_button.rbutton_icon_category",
+              "controlling_value_regex" : "cat-foundations",
+              "property" : null,
+              "operator" : "EQUAL",
+              "access" : null
+            },
+            "display" : "select",
+            "choices" : [ [ "copyright", "Copyright" ], [ "house", "House" ], [ "magnifying-glass", "Magnifying Glass" ], [ "registered", "Registered" ], [ "phone", "Phone" ], [ "location-dot", "Location Dot" ], [ "phone-volume", "Phone Volume" ], [ "envelope", "Envelope" ], [ "globe", "Globe" ], [ "calendar-days", "Calendar Days" ] ],
+            "multiple" : false,
+            "reordering_enabled" : true,
+            "preset" : null,
+            "type" : "choice",
+            "default" : "copyright"
+          }, {
+            "id" : "hsc_slide.right_button.cat_company",
+            "name" : "cat_company",
+            "display_width" : null,
+            "label" : "Icon (company)",
+            "required" : false,
+            "locked" : false,
+            "visibility" : {
+              "controlling_field" : null,
+              "controlling_field_path" : "hsc_slide.right_button.rbutton_icon_category",
+              "controlling_value_regex" : "cat-company",
+              "property" : null,
+              "operator" : "EQUAL",
+              "access" : null
+            },
+            "display" : "select",
+            "choices" : [ [ "user", "User" ], [ "building", "Building" ], [ "elephant", "Elephant" ], [ "briefcase", "Briefcase" ], [ "address-card", "Address Card" ], [ "city", "City" ], [ "earth-americas", "Earth Americas" ], [ "earth-oceania", "Earth Oceania" ], [ "earth-europe", "Earth Europe" ], [ "earth-asia", "Earth Asia" ], [ "earth-africa", "Earth Africa" ] ],
+            "multiple" : false,
+            "reordering_enabled" : true,
+            "preset" : null,
+            "type" : "choice",
+            "default" : "elephant"
+          }, {
+            "id" : "hsc_slide.right_button.cat_alerts",
+            "name" : "cat_alerts",
+            "display_width" : null,
+            "label" : "Icon (alerts & controls)",
+            "required" : false,
+            "locked" : false,
+            "visibility" : {
+              "controlling_field" : null,
+              "controlling_field_path" : "hsc_slide.right_button.rbutton_icon_category",
+              "controlling_value_regex" : "cat-alerts",
+              "property" : null,
+              "operator" : "EQUAL",
+              "access" : null
+            },
+            "display" : "select",
+            "choices" : [ [ "volume", "Volume" ], [ "eye", "Eye" ], [ "eye-lash", "Eye Lash" ], [ "lock", "Lock" ], [ "trash", "Trash" ], [ "circle-exclamation", "Circle Exclamation" ], [ "check", "Check" ], [ "xmark", "XMark" ], [ "plus", "Plus" ], [ "minus", "Minus" ], [ "gear", "Gear" ], [ "square-info", "Square Info" ], [ "square-question", "Square Question" ] ],
+            "multiple" : false,
+            "reordering_enabled" : true,
+            "preset" : null,
+            "type" : "choice",
+            "default" : "volume"
+          }, {
+            "id" : "hsc_slide.right_button.link",
+            "name" : "link",
+            "display_width" : null,
+            "label" : "Link",
+            "required" : false,
+            "locked" : false,
+            "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+            "show_advanced_rel_options" : false,
+            "type" : "link",
+            "default" : {
+              "url" : {
+                "content_id" : null,
+                "type" : "EXTERNAL",
+                "href" : ""
+              },
+              "open_in_new_tab" : false,
+              "no_follow" : false
+            }
+          } 
+        ],
+        "tab" : "CONTENT",
+        "expanded" : false,
+        "group_occurrence_meta" : null,
+        "type" : "group",
+        "default" : {
+          "button_label" : "Label",
+          "button_type" : "btn-pri-inv",
+          "button_leading_icon" : true,
+          "show_button" : true,
+          "rbutton_icon_category" : "cat-company",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        }
+      }, {
+        "id" : "hsc_slide.show_logos",
+        "name" : "show_logos",
+        "display_width" : null,
+        "label" : "Show Logos",
+        "required" : false,
+        "locked" : false,
+        "display" : "toggle",
+        "type" : "boolean",
+        "default" : false
+      }, {
+        "id" : "hsc_slide.lg_logos",
+        "name" : "lg_logos",
+        "display_width" : null,
+        "label" : "Logo Grid Logos",
+        "required" : true,
+        "locked" : false,
+        "occurrence" : {
+          "min" : 1,
+          "max" : 4,
+          "sorting_label_field" : null,
+          "default" : 4
+        },
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "hsc_slide.show_logos",
+          "controlling_value_regex" : "true",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "children" : [ 
+          {
+            "id" : "hsc_slide.lg_logos.lg_logo",
+            "name" : "lg_logo",
+            "display_width" : null,
+            "label" : "Logo",
+            "required" : false,
+            "locked" : false,
+            "responsive" : true,
+            "resizable" : true,
+            "show_loading" : false,
+            "type" : "image",
+            "default" : {
+              "size_type" : "auto_custom_max",
+              "src" : "https://2930497.fs1.hubspotusercontent-na1.net/hubfs/2930497/Logo-white.png",
+              "alt" : "company logo",
+              "loading" : "lazy",
+              "width" : 160,
+              "height" : 100,
+              "max_width" : 160,
+              "max_height" : 100
+            }
+          }, {
+            "id" : "hsc_slide.lg_logos.lg_logo_placeholder_text",
+            "name" : "lg_logo_placeholder_text",
+            "display_width" : null,
+            "label" : "Title",
+            "required" : false,
+            "locked" : false,
+            "validation_regex" : "",
+            "placeholder" : "",
+            "allow_new_line" : false,
+            "show_emoji_picker" : false,
+            "type" : "text",
+            "default" : "logo-placeholder"
+          } 
+        ],
+        "tab" : "CONTENT",
+        "expanded" : false,
+        "group_occurrence_meta" : null,
+        "type" : "group",
+        "default" : [ 
+          {
+            "lg_logo" : {
+              "size_type" : "auto_custom_max",
+              "src" : "https://2930497.fs1.hubspotusercontent-na1.net/hubfs/2930497/Logo-white.png",
+              "alt" : "company logo",
+              "loading" : "lazy",
+              "width" : 160,
+              "height" : 100,
+              "max_width" : 160,
+              "max_height" : 100
+            },
+            "lg_logo_placeholder_text" : "logo-placeholder"
+          } 
+        ]
+      }, {
+        "id" : "hsc_slide.show_arrow_buttons",
+        "name" : "show_arrow_buttons",
+        "display_width" : null,
+        "label" : "Show Arrow Buttons",
+        "required" : false,
+        "locked" : false,
+        "display" : "toggle",
+        "type" : "boolean",
+        "default" : false
+      }, {
+        "id" : "hsc_slide.left_arrow_button",
+        "name" : "left_arrow_button",
+        "display_width" : null,
+        "label" : "Left Arrow Button",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "hsc_slide.show_arrow_buttons",
+          "controlling_value_regex" : "true",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "children" : [ 
+          {
+            "id" : "hsc_slide.left_arrow_button.button_label",
+            "name" : "button_label",
+            "display_width" : null,
+            "label" : "Label",
+            "required" : true,
+            "locked" : false,
+            "validation_regex" : "",
+            "allow_new_line" : false,
+            "show_emoji_picker" : false,
+            "type" : "text",
+            "default" : "Button"
+          }, {
+            "id" : "hsc_slide.left_arrow_button.button_type",
+            "name" : "button_type",
+            "display_width" : null,
+            "label" : "Type",
+            "required" : true,
+            "locked" : false,
+            "display" : "select",
+            "choices" : [ [ "btn-pri", "Primary" ], [ "btn-pri-inv", "Primary Inverted" ], [ "btn-sec", "Secondary" ], [ "btn-acc", "Accent" ] ],
+            "multiple" : false,
+            "reordering_enabled" : true,
+            "preset" : null,
+            "type" : "choice",
+            "default" : "btn-pri"
+          }, {
+            "id" : "hsc_slide.left_arrow_button.link_field",
+            "name" : "link_field",
+            "display_width" : null,
+            "label" : "Link",
+            "required" : false,
+            "locked" : false,
+            "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+            "show_advanced_rel_options" : false,
+            "type" : "link",
+            "default" : {
+              "url" : {
+                "content_id" : null,
+                "type" : "EXTERNAL",
+                "href" : ""
+              },
+              "open_in_new_tab" : false,
+              "no_follow" : false
+            }
+          }, {
+            "id" : "hsc_slide.left_arrow_button.button_size",
+            "name" : "button_size",
+            "display_width" : null,
+            "label" : "Size",
+            "required" : false,
+            "locked" : false,
+            "display" : "select",
+            "choices" : [ [ "btn-sm", "Small" ], [ "btn-md", "Medium" ] ],
+            "multiple" : false,
+            "reordering_enabled" : true,
+            "preset" : null,
+            "type" : "choice",
+            "default" : "btn-sm"
+          } 
+        ],
+        "tab" : "CONTENT",
+        "expanded" : false,
+        "group_occurrence_meta" : null,
+        "type" : "group",
+        "default" : {
+          "button_label" : "Button",
+          "button_type" : "btn-pri",
+          "link_field" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          },
+          "button_size" : "btn-sm"
+        }
+      }, {
+        "id" : "hsc_slide.right_arrow_button",
+        "name" : "right_arrow_button",
+        "display_width" : null,
+        "label" : "Right Arrow Button",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "hsc_slide.show_arrow_buttons",
+          "controlling_value_regex" : "true",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "children" : [ 
+          {
+            "id" : "hsc_slide.right_arrow_button.show_right_arrow_button",
+            "name" : "show_right_arrow_button",
+            "display_width" : null,
+            "label" : "Show Rigth Arrow Button",
+            "required" : false,
+            "locked" : false,
+            "display" : "toggle",
+            "type" : "boolean",
+            "default" : false
+          }, {
+            "id" : "hsc_slide.right_arrow_button.button_label",
+            "name" : "button_label",
+            "display_width" : null,
+            "label" : "Label",
+            "required" : true,
+            "locked" : false,
+            "validation_regex" : "",
+            "allow_new_line" : false,
+            "show_emoji_picker" : false,
+            "type" : "text",
+            "default" : "Button"
+          }, {
+            "id" : "hsc_slide.right_arrow_button.button_type",
+            "name" : "button_type",
+            "display_width" : null,
+            "label" : "Type",
+            "required" : true,
+            "locked" : false,
+            "display" : "select",
+            "choices" : [ [ "btn-pri", "Primary" ], [ "btn-pri-inv", "Primary Inverted" ], [ "btn-sec", "Secondary" ], [ "btn-acc", "Accent" ] ],
+            "multiple" : false,
+            "reordering_enabled" : true,
+            "preset" : null,
+            "type" : "choice",
+            "default" : "btn-pri"
+          }, {
+            "id" : "hsc_slide.right_arrow_button.link_field",
+            "name" : "link_field",
+            "display_width" : null,
+            "label" : "Link",
+            "required" : false,
+            "locked" : false,
+            "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+            "show_advanced_rel_options" : false,
+            "type" : "link",
+            "default" : {
+              "url" : {
+                "content_id" : null,
+                "type" : "EXTERNAL",
+                "href" : ""
+              },
+              "open_in_new_tab" : false,
+              "no_follow" : false
+            }
+          }, {
+            "id" : "hsc_slide.right_arrow_button.button_size",
+            "name" : "button_size",
+            "display_width" : null,
+            "label" : "Size",
+            "required" : false,
+            "locked" : false,
+            "display" : "select",
+            "choices" : [ [ "btn-sm", "Small" ], [ "btn-md", "Medium" ] ],
+            "multiple" : false,
+            "reordering_enabled" : true,
+            "preset" : null,
+            "type" : "choice",
+            "default" : "btn-sm"
+          } 
+        ],
+        "tab" : "CONTENT",
+        "expanded" : false,
+        "group_occurrence_meta" : null,
+        "type" : "group",
+        "default" : {
+          "show_right_arrow_button" : false,
+          "button_label" : "Button",
+          "button_type" : "btn-pri",
+          "link_field" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          },
+          "button_size" : "btn-sm"
+        }
+      } 
+    ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "default" : [ 
+      {
+        "hsc_heading_text" : "Heading",
+        "hsc_title" : "Title",
+        "hsc_body_text" : "Lorem ipsum dolor sit amet consectetur. Rutrum pellentesque justo sed neque ipsum feugiat semper urna. Varius semper malesuada volutpat blandit dis. Varius semper malesuada volutpat blandit dis.",
+        "hsc_color" : "hs-midnight-blue",
+        "hsc_hero_image" : {
+          "size_type" : "auto_custom_max",
+          "src" : "https://2930497.fs1.hubspotusercontent-na1.net/hubfs/2930497/ac-03-1.jpeg",
+          "alt" : "Slide-background-with-elephant",
+          "loading" : "lazy",
+          "width" : 1920,
+          "height" : 720,
+          "max_width" : 1920,
+          "max_height" : 720
+        },
+        "show_buttons" : true,
+        "left_button" : {
+          "button_label" : "Label",
+          "button_type" : "btn-sec",
+          "button_leading_icon" : true,
+          "lbutton_icon_category" : "cat-company",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        },
+        "right_button" : {
+          "button_label" : "Label",
+          "button_type" : "btn-pri-inv",
+          "button_leading_icon" : true,
+          "show_button" : true,
+          "rbutton_icon_category" : "cat-company",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        },
+        "show_logos" : false,
+        "lg_logos" : [ 
+          {
+            "lg_logo" : {
+              "size_type" : "auto_custom_max",
+              "src" : "https://2930497.fs1.hubspotusercontent-na1.net/hubfs/2930497/Logo-white.png",
+              "alt" : "company logo",
+              "loading" : "lazy",
+              "width" : 160,
+              "height" : 100,
+              "max_width" : 160,
+              "max_height" : 100
+            },
+            "lg_logo_placeholder_text" : "logo-placeholder"
+          } 
+        ],
+        "show_arrow_buttons" : false,
+        "left_arrow_button" : {
+          "button_label" : "Button",
+          "button_type" : "btn-pri",
+          "link_field" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          },
+          "button_size" : "btn-sm"
+        },
+        "right_arrow_button" : {
+          "show_right_arrow_button" : false,
+          "button_label" : "Button",
+          "button_type" : "btn-pri",
+          "link_field" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          },
+          "button_size" : "btn-sm"
+        }
+      } 
+    ]
+  }, {
+    "id" : "styles",
+    "name" : "styles",
+    "display_width" : null,
+    "label" : "Styles",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "styles.hsc_section_width",
+      "name" : "hsc_section_width",
+      "display_width" : null,
+      "label" : "Section Width",
+      "required" : false,
+      "locked" : false,
+      "display" : "slider",
+      "placeholder" : "1200",
+      "min" : 720,
+      "max" : 1920,
+      "step" : 1,
+      "prefix" : "",
+      "suffix" : "px",
+      "type" : "number",
+      "default" : 1200
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group"
+  } 
+]

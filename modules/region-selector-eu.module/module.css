@@ -1,0 +1,61 @@
+.language-switcher {
+    cursor: pointer;
+}
+
+.region-selector-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--charcoal-black-25);
+    z-index: 9998;
+    display: none;
+}
+
+.region-selector {
+    max-width: 500px;
+    min-width: 343px;
+    max-height: 90%;
+    overflow-y: auto;
+    
+    background-color: var(--pure-white);
+    padding: var(--padding-lg) 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    display: none;
+    
+}
+
+.show-region-selector .region-selector, .show-region-selector .region-selector-overlay {
+    display: block;
+}
+
+.region-selector .close {
+    float: none;
+    margin-right: var(--margin-lg);
+}
+
+.region-selector .close i {
+    float: right;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+.region-selector p {
+    padding: var(--padding-md) var(--padding-lg);
+    margin: 0;
+}
+
+.region-selector ul {
+    margin: 0;
+    padding: 0;
+}
+
+.region-selector p {
+  color: var(--charcoal-black-75);
+}

@@ -1,0 +1,131 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: FAQ
+  screenshotPath: ../images/template-previews/landing-page.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block header %}
+  {% global_partial path="./partials/header-global.html" %}
+{% endblock header %}
+
+
+{% block body %}
+{% dnd_area "dnd_area"
+  label="Main section",
+  class="body-container body-container--faq"
+%}
+
+    {# Section Header #}
+
+    {% dnd_section 
+        background_color='#f2f3f6',
+        padding={'top': 64, 'bottom': 64, 'left': 16, 'right': 16},
+        width=1200
+    %}
+        {% dnd_column width=12 %}
+        {% dnd_row %}
+            {% dnd_module 'section_header' 
+                path='../modules/section-header-eu.module',
+                show_subtext='false',
+                heading='Frequently asked questions',
+                show_body='false'
+            %}
+            {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# Search #}
+
+    {% dnd_section 
+        background_color='#f2f3f6',
+        padding={'top': 10, 'bottom': 10, 'left': 16, 'right': 16},
+        width=1200
+    %}
+        {% dnd_column width=12 %}
+        {% dnd_row %}
+            {% dnd_module 'search-bar' 
+                path='../modules/search-bar-eu.module',
+                sb_expanded="true"
+              %}{% end_dnd_module %}
+        {% end_dnd_row %}
+        {% end_dnd_column %}
+    {% end_dnd_section %}
+
+
+    {# Accordion #}
+
+    {% dnd_section 
+        background_color='#f2f3f6',
+        padding={'top': 64, 'bottom': 64, 'left': 16, 'right': 16},
+        width=1200
+    %}
+        {% dnd_column width=12 %}
+            {% dnd_row %}
+            {% dnd_module 'accordion' 
+                path='../modules/accordian-eu.module',
+                acc_sections=[
+                    {
+                        'sec_header_text':'Label',
+                        'sec_show_image':false,
+                        'sec_show_subheading':false,
+                        'sec_show_title':true,
+                        'sec_title_text':'Titles of paragraphs and descriptions',
+                        'sec_show_caption':false,
+                        'sec_show_body':true,
+                        'sec_body_text':'Lorem ipsum dolor sit amet consectetur. Ipsum in tortor tortor ac nunc rhoncus. Arcu facilisis nunc nec cras. Amet feugiat sed sit egestas ac tellus duis tortor. Scelerisque feugiat sagittis elementum tellus aliquet faucibus placerat ridiculus nibh. Est nec fermentum pretium amet nullam porta nunc cursus. Aliquet id mauris donec vitae. Platea fringilla at proin vel. Facilisis metus ultrices donec id sit vitae aliquam pulvinar purus. Vel amet amet elementum vestibulum mauris vel commodo ac volutpat.</br></br> Tempus proin varius hendrerit facilisi eu volutpat nulla scelerisque. Lobortis ac quam quis ut. Consectetur mauris vel sit sit cursus. Enim mi arcu placerat maecenas non gravida. A donec auctor tortor sed convallis amet donec euismod. Rhoncus venenatis viverra malesuada risus morbi ornare et. Risus nibh at scelerisque varius egestas adipiscing auctor. Nec in amet maecenas quis ornare ac aenean iaculis mi. Quam aliquet in morbi at. Malesuada morbi eget lacus at ante vel lobortis auctor nunc. Consectetur mattis quis eu in. Posuere orci nibh mi sagittis odio cum. Quis odio felis bibendum nibh quis quis. In in eu in enim tincidunt. Tellus fermentum ut scelerisque enim ac. Elementum odio orci at elit fermentum amet mattis. Tempus scelerisque tristique mi odio aliquet fermentum lectus. Cursus elit fames pellentesque volutpat massa quis risus. Arcu lectus et tempus morbi molestie gravida tempor arcu dapibus. Eu turpis vitae aliquam ornare sed massa tristique. Sem nunc sollicitudin dignissim laoreet eget. Morbi vitae nullam ut nisi feugiat lacus. Ornare id dignissim blandit fermentum varius et habitant ipsum. Tellus vestibulum dignissim vitae sagittis aliquam dictumst. Diam non faucibus egestas enim feugiat. Varius aliquam vitae mauris velit ac faucibus. Adipiscing eros sed quis quis interdum. Ut rhoncus nunc habitasse et. In volutpat nunc integer nulla tortor. Viverra cras non purus id iaculis consectetur id.'
+                    },
+                    {
+                        'sec_header_text':'Label',
+                        'sec_show_image':false,
+                        'sec_show_subheading':false,
+                        'sec_show_title':true,
+                        'sec_title_text':'Titles of paragraphs and descriptions',
+                        'sec_show_caption':false,
+                        'sec_show_body':true,
+                        'sec_body_text':'Lorem ipsum dolor sit amet consectetur. Ipsum in tortor tortor ac nunc rhoncus. Arcu facilisis nunc nec cras. Amet feugiat sed sit egestas ac tellus duis tortor. Scelerisque feugiat sagittis elementum tellus aliquet faucibus placerat ridiculus nibh. Est nec fermentum pretium amet nullam porta nunc cursus. Aliquet id mauris donec vitae. Platea fringilla at proin vel. Facilisis metus ultrices donec id sit vitae aliquam pulvinar purus. Vel amet amet elementum vestibulum mauris vel commodo ac volutpat.</br></br> Tempus proin varius hendrerit facilisi eu volutpat nulla scelerisque. Lobortis ac quam quis ut. Consectetur mauris vel sit sit cursus. Enim mi arcu placerat maecenas non gravida. A donec auctor tortor sed convallis amet donec euismod. Rhoncus venenatis viverra malesuada risus morbi ornare et. Risus nibh at scelerisque varius egestas adipiscing auctor. Nec in amet maecenas quis ornare ac aenean iaculis mi. Quam aliquet in morbi at. Malesuada morbi eget lacus at ante vel lobortis auctor nunc. Consectetur mattis quis eu in. Posuere orci nibh mi sagittis odio cum. Quis odio felis bibendum nibh quis quis. In in eu in enim tincidunt. Tellus fermentum ut scelerisque enim ac. Elementum odio orci at elit fermentum amet mattis. Tempus scelerisque tristique mi odio aliquet fermentum lectus. Cursus elit fames pellentesque volutpat massa quis risus. Arcu lectus et tempus morbi molestie gravida tempor arcu dapibus. Eu turpis vitae aliquam ornare sed massa tristique. Sem nunc sollicitudin dignissim laoreet eget. Morbi vitae nullam ut nisi feugiat lacus. Ornare id dignissim blandit fermentum varius et habitant ipsum. Tellus vestibulum dignissim vitae sagittis aliquam dictumst. Diam non faucibus egestas enim feugiat. Varius aliquam vitae mauris velit ac faucibus. Adipiscing eros sed quis quis interdum. Ut rhoncus nunc habitasse et. In volutpat nunc integer nulla tortor. Viverra cras non purus id iaculis consectetur id.'
+                    },
+                    {
+                        'sec_header_text':'Label',
+                        'sec_show_image':false,
+                        'sec_show_subheading':false,
+                        'sec_show_title':true,
+                        'sec_title_text':'Titles of paragraphs and descriptions',
+                        'sec_show_caption':false,
+                        'sec_show_body':true,
+                        'sec_body_text':'Lorem ipsum dolor sit amet consectetur. Ipsum in tortor tortor ac nunc rhoncus. Arcu facilisis nunc nec cras. Amet feugiat sed sit egestas ac tellus duis tortor. Scelerisque feugiat sagittis elementum tellus aliquet faucibus placerat ridiculus nibh. Est nec fermentum pretium amet nullam porta nunc cursus. Aliquet id mauris donec vitae. Platea fringilla at proin vel. Facilisis metus ultrices donec id sit vitae aliquam pulvinar purus. Vel amet amet elementum vestibulum mauris vel commodo ac volutpat.</br></br> Tempus proin varius hendrerit facilisi eu volutpat nulla scelerisque. Lobortis ac quam quis ut. Consectetur mauris vel sit sit cursus. Enim mi arcu placerat maecenas non gravida. A donec auctor tortor sed convallis amet donec euismod. Rhoncus venenatis viverra malesuada risus morbi ornare et. Risus nibh at scelerisque varius egestas adipiscing auctor. Nec in amet maecenas quis ornare ac aenean iaculis mi. Quam aliquet in morbi at. Malesuada morbi eget lacus at ante vel lobortis auctor nunc. Consectetur mattis quis eu in. Posuere orci nibh mi sagittis odio cum. Quis odio felis bibendum nibh quis quis. In in eu in enim tincidunt. Tellus fermentum ut scelerisque enim ac. Elementum odio orci at elit fermentum amet mattis. Tempus scelerisque tristique mi odio aliquet fermentum lectus. Cursus elit fames pellentesque volutpat massa quis risus. Arcu lectus et tempus morbi molestie gravida tempor arcu dapibus. Eu turpis vitae aliquam ornare sed massa tristique. Sem nunc sollicitudin dignissim laoreet eget. Morbi vitae nullam ut nisi feugiat lacus. Ornare id dignissim blandit fermentum varius et habitant ipsum. Tellus vestibulum dignissim vitae sagittis aliquam dictumst. Diam non faucibus egestas enim feugiat. Varius aliquam vitae mauris velit ac faucibus. Adipiscing eros sed quis quis interdum. Ut rhoncus nunc habitasse et. In volutpat nunc integer nulla tortor. Viverra cras non purus id iaculis consectetur id.'
+                    },
+                    {
+                        'sec_header_text':'Label',
+                        'sec_show_image':false,
+                        'sec_show_subheading':false,
+                        'sec_show_title':true,
+                        'sec_title_text':'Titles of paragraphs and descriptions',
+                        'sec_show_caption':false,
+                        'sec_show_body':true,
+                        'sec_body_text':'Lorem ipsum dolor sit amet consectetur. Ipsum in tortor tortor ac nunc rhoncus. Arcu facilisis nunc nec cras. Amet feugiat sed sit egestas ac tellus duis tortor. Scelerisque feugiat sagittis elementum tellus aliquet faucibus placerat ridiculus nibh. Est nec fermentum pretium amet nullam porta nunc cursus. Aliquet id mauris donec vitae. Platea fringilla at proin vel. Facilisis metus ultrices donec id sit vitae aliquam pulvinar purus. Vel amet amet elementum vestibulum mauris vel commodo ac volutpat.</br></br> Tempus proin varius hendrerit facilisi eu volutpat nulla scelerisque. Lobortis ac quam quis ut. Consectetur mauris vel sit sit cursus. Enim mi arcu placerat maecenas non gravida. A donec auctor tortor sed convallis amet donec euismod. Rhoncus venenatis viverra malesuada risus morbi ornare et. Risus nibh at scelerisque varius egestas adipiscing auctor. Nec in amet maecenas quis ornare ac aenean iaculis mi. Quam aliquet in morbi at. Malesuada morbi eget lacus at ante vel lobortis auctor nunc. Consectetur mattis quis eu in. Posuere orci nibh mi sagittis odio cum. Quis odio felis bibendum nibh quis quis. In in eu in enim tincidunt. Tellus fermentum ut scelerisque enim ac. Elementum odio orci at elit fermentum amet mattis. Tempus scelerisque tristique mi odio aliquet fermentum lectus. Cursus elit fames pellentesque volutpat massa quis risus. Arcu lectus et tempus morbi molestie gravida tempor arcu dapibus. Eu turpis vitae aliquam ornare sed massa tristique. Sem nunc sollicitudin dignissim laoreet eget. Morbi vitae nullam ut nisi feugiat lacus. Ornare id dignissim blandit fermentum varius et habitant ipsum. Tellus vestibulum dignissim vitae sagittis aliquam dictumst. Diam non faucibus egestas enim feugiat. Varius aliquam vitae mauris velit ac faucibus. Adipiscing eros sed quis quis interdum. Ut rhoncus nunc habitasse et. In volutpat nunc integer nulla tortor. Viverra cras non purus id iaculis consectetur id.'
+                    },
+                    {
+                        'sec_header_text':'Label',
+                        'sec_show_image':false,
+                        'sec_show_subheading':false,
+                        'sec_show_title':true,
+                        'sec_title_text':'Titles of paragraphs and descriptions',
+                        'sec_show_caption':false,
+                        'sec_show_body':true,
+                        'sec_body_text':'Lorem ipsum dolor sit amet consectetur. Ipsum in tortor tortor ac nunc rhoncus. Arcu facilisis nunc nec cras. Amet feugiat sed sit egestas ac tellus duis tortor. Scelerisque feugiat sagittis elementum tellus aliquet faucibus placerat ridiculus nibh. Est nec fermentum pretium amet nullam porta nunc cursus. Aliquet id mauris donec vitae. Platea fringilla at proin vel. Facilisis metus ultrices donec id sit vitae aliquam pulvinar purus. Vel amet amet elementum vestibulum mauris vel commodo ac volutpat.</br></br> Tempus proin varius hendrerit facilisi eu volutpat nulla scelerisque. Lobortis ac quam quis ut. Consectetur mauris vel sit sit cursus. Enim mi arcu placerat maecenas non gravida. A donec auctor tortor sed convallis amet donec euismod. Rhoncus venenatis viverra malesuada risus morbi ornare et. Risus nibh at scelerisque varius egestas adipiscing auctor. Nec in amet maecenas quis ornare ac aenean iaculis mi. Quam aliquet in morbi at. Malesuada morbi eget lacus at ante vel lobortis auctor nunc. Consectetur mattis quis eu in. Posuere orci nibh mi sagittis odio cum. Quis odio felis bibendum nibh quis quis. In in eu in enim tincidunt. Tellus fermentum ut scelerisque enim ac. Elementum odio orci at elit fermentum amet mattis. Tempus scelerisque tristique mi odio aliquet fermentum lectus. Cursus elit fames pellentesque volutpat massa quis risus. Arcu lectus et tempus morbi molestie gravida tempor arcu dapibus. Eu turpis vitae aliquam ornare sed massa tristique. Sem nunc sollicitudin dignissim laoreet eget. Morbi vitae nullam ut nisi feugiat lacus. Ornare id dignissim blandit fermentum varius et habitant ipsum. Tellus vestibulum dignissim vitae sagittis aliquam dictumst. Diam non faucibus egestas enim feugiat. Varius aliquam vitae mauris velit ac faucibus. Adipiscing eros sed quis quis interdum. Ut rhoncus nunc habitasse et. In volutpat nunc integer nulla tortor. Viverra cras non purus id iaculis consectetur id.'
+                    }
+                ]
+            %}{% end_dnd_module %}
+            {% end_dnd_row %}
+        {% end_dnd_column %}
+    {% end_dnd_section %}
+
+{% end_dnd_area %}
+{% endblock body %}
+
+{% block footer %}
+    {% global_partial path="./partials/footer-micro.html" %}
+{% endblock footer %}

@@ -1,0 +1,103 @@
+.heroslide h1, .heroslide h2, .heroslide h3, .heroslide h4, .heroslide h5, .heroslide p{
+    margin: 0;
+}
+
+.hs-inner{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.hs-vertical-image{
+    display:none; /* Hide hs-vertical-image div by default */
+    height: 480px;
+    background-size: cover; /* This will make the background image cover the entire element */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-position: right; /* Right align the background image within the element */
+}
+
+.hs-vertical-image-elm{
+    max-height: 385px;
+    width: auto;
+}
+
+.hs-content{
+    padding-top: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    padding-bottom: var(--padding-xl);
+    align-self: flex-start;
+}
+.hs-midnight-blue.hs-text-image{
+    background-color: var(--midnight-blue-75);
+}
+
+.hs-pure-white.hs-text-image{
+    background-color: var(--pure-white-75);
+}
+
+.hs-content-inner{
+    max-width: 640px;
+}
+
+/* .hs-text-content{
+
+} */
+.hs-heading-text{
+    font-family: var(--h5-font-family);
+    font-size: var(--h5-font-size);
+    font-weight: var(--h5-font-weight);
+    line-height: var(--h5-line-height);
+}
+.heroslide .hs-title{
+    font-family: var(--h1-font-family);
+    font-size: var(--h1-font-size);
+    font-weight: var(--h1-font-weight);
+    line-height: var(--h1-line-height);
+    margin-bottom: var(--margin-md);
+}
+.hs-body-text{
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size);
+    font-weight: var(--body-font-weight);
+    line-height: var(--body-line-height);
+}
+.hs-midnight-blue .hs-heading-text, .hs-midnight-blue .hs-body-text, .hsc-slide-dark-mode .hs-heading-text, .hsc-slide-dark-mode .hs-body-text{
+    color: var(--pure-white-75);
+}
+.hs-midnight-blue .hs-title, .hsc-slide-dark-mode .hs-title{
+    color: var(--pure-white);
+}
+.hs-pure-white .hs-heading-text{
+    color: var(--charcoal-black-75);
+}
+.hs-pure-white .hs-body-text{
+    color: var(--charcoal-black-75);
+}
+.hs-pure-white .hs-title{
+    color: var(--midnight-blue);
+}
+
+.hs-buttons{
+    display:flex;
+}
+.hs-buttons-inner{
+    display:flex;
+    margin-top: var(--margin-md);
+}
+/* .hs-btn-left{
+
+}
+.hs-btn-right{
+
+}
+.hsc-lg-inner{
+
+} */
+
+.hs-arrow-buttons{
+    display:flex;
+}
+.hs-arrow-buttons-inner{
+    display:flex;
+    margin-top: var(--margin-md);
+}

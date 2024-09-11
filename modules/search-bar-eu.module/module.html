@@ -1,0 +1,78 @@
+<!-- ******** MODULE ******** -->
+<!-- ____ EU Search Bar ___ -->
+
+
+<div class="searchbar {{ "sb-expanded" if module.sb_expanded is truthy }} searchbar-{{ name }}">
+    
+    <div class="sb-bar-container">
+        <input type="text" class="sb-input" placeholder="Search">
+    </div>
+    <div class="sb-icon-container">
+        <i class="fa-light fa-search sb-icon" aria-hidden="true"></i>
+    </div>
+</div>
+
+{% require_js %}
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const searchIconContainer = document.querySelector('.sb-icon-container');
+        const searchInput = document.querySelector('.sb-input');
+        const searchBarContainer = document.querySelector('.sb-bar-container');
+        const searchBar = document.querySelector('.searchbar');
+        const searchIcon = document.querySelector('.sb-icon');
+
+        // Function to toggle searchbar
+        function toggleSearchBar(event) {
+            event.stopPropagation();
+            
+            if (!searchBar.classList.contains('sb-expanded')) {
+                // Opening the searchbar
+                $('.header-global__nav, .header-global__search, .header-global').addClass('sb-open');
+                searchBar.classList.add('sb-expanded');
+                searchBarContainer.classList.add('sliding');
+                searchInput.focus();
+                searchIcon.classList.remove('fa-search');
+                searchIcon.classList.add('fa-arrow-right');
+                updateArrowActiveState();
+            } else {
+                if (searchInput.value === '') {
+                    // Closing the searchbar if input is empty
+                    $('.header-global__nav, .header-global__search, .header-global').removeClass('sb-open');
+                    searchBar.classList.remove('sb-expanded');
+                    searchBarContainer.classList.remove('sliding');
+                    searchBarContainer.classList.remove('elastic');
+                    searchIcon.classList.remove('fa-arrow-right');
+                    searchIcon.classList.add('fa-search');
+                } else {
+                    window.location.href = "{{module.sb_search_page}}?term=" + searchInput.value;
+                }
+            }
+        }
+
+        function updateArrowActiveState() {
+            if (searchBar.classList.contains('sb-expanded') && searchInput.value !== '') {
+                searchIcon.classList.add('arrow-active');
+            } else {
+                searchIcon.classList.remove('arrow-active');
+            }
+        }
+
+        searchIconContainer.addEventListener('click', toggleSearchBar);
+
+        searchInput.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                
+                event.preventDefault();
+                if (searchInput.value !== '') {
+                    window.location.href = "{{module.sb_search_page}}?term="+searchInput.value;
+                }
+            }
+        });
+
+        searchInput.addEventListener('input', updateArrowActiveState);
+
+    });
+</script>
+{% end_require_js %}
+
+<!-- ____ eu-pq-END ___ -->

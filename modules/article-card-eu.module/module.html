@@ -1,0 +1,47 @@
+{{ require_css(get_asset_url("../../css/components/_article-card.css")) }}
+
+{% require_css %} {# this will put the CSS into the <head>-tag to use hubble inside css #}
+  <style>
+    .ac-img-{{ name }}{
+      background-image: linear-gradient(transparent, var(--midnight-blue-75)), url({{ module.ac_image.src|escape_url }});
+    }
+    .ac-img-{{ name }}:hover, .ac-img:active, .ac-img:focus{
+      background-image: linear-gradient(var(--midnight-blue-50), var(--midnight-blue-50)), url({{ module.ac_image.src|escape_url }});
+    }
+  </style>
+{% end_require_css %}
+
+{% set href = module.ac_link_field.url.href %}
+{% if module.ac_link_field.url.type is equalto "EMAIL_ADDRESS" %}
+	{% set href = "mailto:" + href %}
+{% endif %}
+
+<!-- ******** MODULE ******** -->
+<!-- ____ EU Article Card ___ -->
+
+
+<div class="article-card-container align-{{ module.styles.ac_align_card.horizontal_align|lower }}">
+
+<a  
+  {% if href %}
+    href="{{ href|escape_url }}"
+    {% if module.ac_link_field.open_in_new_tab %}target="_blank"{% endif %}
+    {% if module.ac_link_field.rel %}rel="{{ module.ac_link_field.rel|escape_attr }}"{% endif %}
+  {% endif %} 
+  class="article-card-a {{ module.styles.ac_sizing }} article-card-sizing {{ module.ac_size }} {{ name }}"
+>
+<div class="article-card {{ module.styles.ac_sizing }} article-card-sizing {{ module.ac_size }} {{ module.ac_type }} {% if module.ac_type == "ac-img" %}ac-img-{{ name }}{% endif %}">
+    <div class="ac-arrow-icon">
+      {% if module.ac_show_icon %}<i class="arrow-icon fa-regular fa-arrow-up-right"></i>{% endif %}
+    </div>
+    <div class="ac-text-content">
+      {% if module.ac_show_heading %}<h3 class="ac-heading-text">{{ module.ac_heading_text }}</h3>{% endif %} 
+      {% if module.ac_show_date %}<p class="ac-date">{{ module.ac_date }}</p>{% endif %}
+      {% if module.ac_show_title %}<h5 class="ac-title">{{ module.ac_title }}</h5>{% endif %}
+      {% if module.ac_show_body %}<p class="ac-body-text">{{ module.ac_body_text }}</p>{% endif %}
+    </div>
+  </div>
+</a>
+
+</div>
+<!-- ____ eu-ac-END ___ -->

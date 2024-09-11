@@ -1,0 +1,24 @@
+.filter {
+    max-width: 400px;
+    background-color: var(--midnight-blue-5);
+    padding: var(--padding-lg);
+}
+
+.filter h2 {
+    margin-bottom: var(--margin-sm); 
+    color: var(--midnight-blue);
+    font-family: var(--h2-font-family);
+    font-size: var(--h2-font-size);
+    font-weight: var(--h2-font-weight);
+    line-height: var(--h2-line-height);
+    margin-top: 0;
+}
+
+
+.filter a {
+    color: var(--midnight-blue);
+    font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height: var(--body-line-height);
+}

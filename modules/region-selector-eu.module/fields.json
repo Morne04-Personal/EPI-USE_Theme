@@ -1,0 +1,326 @@
+[
+  {
+    "id": "region",
+    "name": "region",
+    "display_width": null,
+    "label": "Region",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": null,
+      "max": null,
+      "sorting_label_field": null,
+      "default": 1
+    },
+    "children": [
+      {
+        "id": "region.primary_text",
+        "name": "primary_text",
+        "display_width": null,
+        "label": "Primary Text",
+        "required": false,
+        "locked": false,
+        "validation_regex": "",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "Global"
+      },
+      {
+        "id": "2a6ef87c-bdc6-31a0-4982-f1c2391eb6af",
+        "name": "url_field",
+        "display_width": null,
+        "label": "Link",
+        "required": false,
+        "locked": false,
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "EMAIL_ADDRESS",
+          "BLOG",
+          "CALL_TO_ACTION",
+          "PHONE_NUMBER",
+          "WHATSAPP_NUMBER",
+          "PAYMENT"
+        ],
+        "show_advanced_rel_options": false,
+        "type": "link",
+        "default": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "id": "region.badge",
+        "name": "badge",
+        "display_width": null,
+        "label": "Badge",
+        "required": false,
+        "locked": false,
+        "children": [
+          {
+            "id": "region.badge.badge_label",
+            "name": "badge_label",
+            "display_width": null,
+            "label": "Label",
+            "required": true,
+            "locked": false,
+            "validation_regex": "",
+            "allow_new_line": false,
+            "show_emoji_picker": false,
+            "type": "text",
+            "default": "Label"
+          },
+          {
+            "id": "region.badge.badge_type",
+            "name": "badge_type",
+            "display_width": null,
+            "label": "Type",
+            "required": true,
+            "locked": false,
+            "display": "select",
+            "choices": [
+              ["bdg-pri", "Primary"],
+              ["bdg-sec", "Secondary"],
+              ["bdg-gho", "Ghost"],
+              ["bdg-mtd", "Muted"]
+            ],
+            "multiple": false,
+            "reordering_enabled": true,
+            "preset": null,
+            "type": "choice",
+            "default": "bdg-mtd"
+          },
+          {
+            "id": "region.badge.badge_show_label",
+            "name": "badge_show_label",
+            "display_width": null,
+            "label": "Show Label",
+            "required": false,
+            "locked": false,
+            "display": "toggle",
+            "type": "boolean",
+            "default": true
+          },
+          {
+            "id": "region.badge.badge_leading_icon",
+            "name": "badge_leading_icon",
+            "display_width": null,
+            "label": "Leading Icon",
+            "required": false,
+            "locked": false,
+            "display": "toggle",
+            "type": "boolean",
+            "default": true
+          }
+        ],
+        "tab": "CONTENT",
+        "expanded": false,
+        "group_occurrence_meta": null,
+        "type": "group"
+      },
+      {
+        "name": "icon",
+        "display_width": null,
+        "label": "Icon",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          ["earth-oceania", "Earth Oceania"],
+          ["earth-europe", "Earth Europe"],
+          ["earth-asia", "Earth Asia"],
+          ["earth-americas", "Earth Americas"],
+          ["earth-africa", "Earth Africa"]
+        ],
+        "multiple": false,
+        "reordering_enabled": true,
+        "preset": null,
+        "type": "choice",
+        "default": "earth-oceania"
+      },
+      {
+        "id": "region.domains",
+        "name": "domains",
+        "display_width": null,
+        "label": "Domains",
+        "required": false,
+        "locked": false,
+        "occurrence": {
+          "min": null,
+          "max": null,
+          "sorting_label_field": null,
+          "default": 1
+        },
+        "children": [
+          {
+            "id": "region.domain_url",
+            "name": "domain_url",
+            "display_width": null,
+            "label": "Domain URL",
+            "required": false,
+            "locked": false,
+            "validation_regex": "",
+            "allow_new_line": false,
+            "show_emoji_picker": false,
+            "type": "text",
+            "default": ""
+          }
+        ],
+        "tab": "CONTENT",
+        "expanded": false,
+        "group_occurrence_meta": null,
+        "type": "group",
+        "default": [
+          {
+            "domain_url": "https://epi-use.com"
+          }
+        ]
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "default": [
+      {
+        "primary_text": "Global",
+        "badge": {
+          "badge_label": "EN",
+          "badge_type": "bdg-gho",
+          "badge_show_label": true,
+          "badge_leading_icon": true
+        },
+        "icon": "earth-oceania"
+      },
+      {
+        "primary_text": "Australia",
+        "badge": {
+          "badge_label": "EN",
+          "badge_type": "bdg-gho",
+          "badge_show_label": true,
+          "badge_leading_icon": true
+        },
+        "icon": "earth-oceania"
+      },
+      {
+        "primary_text": "Benelaux",
+        "badge": {
+          "badge_label": "EN",
+          "badge_type": "bdg-gho",
+          "badge_show_label": true,
+          "badge_leading_icon": true
+        },
+        "icon": "earth-europe"
+      },
+      {
+        "primary_text": "Benelaux",
+        "badge": {
+          "badge_label": "FR",
+          "badge_type": "bdg-gho",
+          "badge_show_label": true,
+          "badge_leading_icon": true
+        },
+        "icon": "earth-europe"
+      },
+      {
+        "primary_text": "China",
+        "badge": {
+          "badge_label": "汉语",
+          "badge_type": "bdg-gho",
+          "badge_show_label": true,
+          "badge_leading_icon": true
+        },
+        "icon": "earth-asia"
+      },
+      {
+        "primary_text": "Germany",
+        "badge": {
+          "badge_label": "GER",
+          "badge_type": "bdg-gho",
+          "badge_show_label": true,
+          "badge_leading_icon": true
+        },
+        "icon": "earth-europe"
+      },
+      {
+        "primary_text": "Japan",
+        "badge": {
+          "badge_label": "日本",
+          "badge_type": "bdg-gho",
+          "badge_show_label": true,
+          "badge_leading_icon": true
+        },
+        "icon": "earth-asia"
+      },
+      {
+        "primary_text": "Latin America",
+        "badge": {
+          "badge_label": "EN",
+          "badge_type": "bdg-gho",
+          "badge_show_label": true,
+          "badge_leading_icon": true
+        },
+        "icon": "earth-americas"
+      },
+      {
+        "primary_text": "Latin America",
+        "badge": {
+          "badge_label": "ESP",
+          "badge_type": "bdg-gho",
+          "badge_show_label": true,
+          "badge_leading_icon": true
+        },
+        "icon": "earth-americas"
+      },
+      {
+        "primary_text": "South Africa",
+        "badge": {
+          "badge_label": "EN",
+          "badge_type": "bdg-gho",
+          "badge_show_label": true,
+          "badge_leading_icon": true
+        },
+        "icon": "earth-africa"
+      },
+      {
+        "primary_text": "United Kingdom",
+        "badge": {
+          "badge_label": "EN",
+          "badge_type": "bdg-gho",
+          "badge_show_label": true,
+          "badge_leading_icon": true
+        },
+        "icon": "earth-europe"
+      },
+      {
+        "primary_text": "United States",
+        "badge": {
+          "badge_label": "EN",
+          "badge_type": "bdg-gho",
+          "badge_show_label": true,
+          "badge_leading_icon": true
+        },
+        "icon": "earth-americas"
+      }
+    ]
+  },
+  {
+    "name": "body_text",
+    "display_width": null,
+    "label": "Body Text",
+    "required": false,
+    "locked": false,
+    "validation_regex": "",
+    "allow_new_line": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "Should you be interested in any of our specfic regions, please make your selection:"
+  }
+]

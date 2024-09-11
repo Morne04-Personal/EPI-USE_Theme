@@ -1,0 +1,25 @@
+[
+  {
+    "name" : "sb_expanded",
+    "display_width" : null,
+    "label" : "Expanded",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : false
+  },
+  {
+    "id" : "sb_search_page",
+    "name" : "sb_search_page",
+    "display_width" : null,
+    "label" : "Search Page",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "https://www.epiuselabs.com/-temporary-slug-078617cf-5235-46ee-b6fc-c88c0a35525a?hs_preview=EhozdZSy-171987920709"
+  }
+]

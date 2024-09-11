@@ -1,0 +1,219 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Contact
+  screenshotPath: ../images/template-previews/home.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block header %}
+    {% global_partial path="./partials/header-global.html" %}
+  {% endblock header %}
+
+{% block body %}
+ {{require_css(get_asset_url("../css/templates/contact.css"))}}
+{% dnd_area "dnd_area"
+  label="Main section",
+  class="body-container body-container--contact"
+%}
+
+    
+  
+    {% dnd_section 
+      padding={'top': 64, 'bottom': 0, 'left': 16, 'right': 16},
+      max_width=1200,
+      background_color="rgba(0, 24, 68, 0.05)"
+    %}
+      {% dnd_column width=12 %}
+        {% dnd_row %}
+          {% dnd_module 'section-header' path='../modules/section-header-eu.module'
+            show_subtext=false,
+            heading="Regional offices",
+            show_subheading=false,
+            body_text="EPI-USE is a global organization with local presence worldwide. Contact details and addresses are listed below."
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+
+        
+        
+      {% end_dnd_column %}
+      
+      
+    {% end_dnd_section %}
+
+
+    {% dnd_section 
+      padding={'top': 32, 'bottom': 64, 'left': 16, 'right': 16},
+      max_width=1200,
+      background_color="rgba(0, 24, 68, 0.05)"
+    %}
+      {% dnd_column width=12 %}
+        {% dnd_row %}
+          {% dnd_column width=6 %}
+            {% dnd_row %}
+              {% dnd_module 'var-card' path='../modules/var-card-eu.module'
+                show_subheading=false,
+                title="Walldorf Office",
+                show_date=false,
+                text="Altrottstraße 31, 69190,<br /> Walldorf<br />Tel: +49 6227 6 98 98 0<br />E-mail: info.de@epiuse.com",
+                image_placement="trailing",
+                image_field={
+                  src:"https://2930497.fs1.hubspotusercontent-na1.net/hubfs/2930497/contact-cities.png"
+                },
+                link_card=false
+              %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+            
+          {% end_dnd_column %}
+          {% dnd_column width=6, offset=6 %}
+            {% dnd_row %}
+              {% dnd_module 'var-card' path='../modules/var-card-eu.module'
+                show_subheading=false,
+                title="Cologne Office",
+                show_date=false,
+                text="Tunisstraße 19-23, 50667,<br />Köln<br />Tel: +49 6227 6 98 98 0<br />E-mail: info.de@epiuse.com",
+                image_placement="trailing",
+                image_field={
+                  src:"https://2930497.fs1.hubspotusercontent-na1.net/hubfs/2930497/contact-cities.png"
+                },
+                link_card=false
+              %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+            
+          {% end_dnd_column %}
+
+          
+
+        {% end_dnd_row %}
+
+        {% dnd_row %}
+
+
+          {% dnd_column width=6 %}
+            {% dnd_row %}
+              {% dnd_module 'var-card' path='../modules/var-card-eu.module'
+                show_subheading=false,
+                title="Hanau Office",
+                show_date=false,
+                text="Sophie-Scholl-Platz 8, 63452, <br />Hanau<br />Tel: +49 6181 1 89 01 0<br />E-mail: info.de@epiuse.com",
+                image_placement="trailing",
+                image_field={
+                  src:"https://2930497.fs1.hubspotusercontent-na1.net/hubfs/2930497/contact-cities.png"
+                },
+                link_card=false
+              %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+            
+          {% end_dnd_column %}
+
+
+          {% dnd_column width=6, offset=6 %}
+            {% dnd_row %}
+              {% dnd_module 'var-card' path='../modules/var-card-eu.module'
+                show_subheading=false,
+                title="Dresden Office",
+                show_date=false,
+                text="Weißeritzerstraße 3, 1067, <br />Dresden<br />Tel: +49 6181 1 89 01 0<br />E-mail: info.de@epiuse.com",
+                image_placement="trailing",
+                image_field={
+                  src:"https://2930497.fs1.hubspotusercontent-na1.net/hubfs/2930497/contact-cities.png"
+                },
+                link_card=false
+              %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+            
+          {% end_dnd_column %}
+
+          
+
+        {% end_dnd_row %} 
+
+        {% dnd_row %}
+          {% dnd_column width=6 %}
+            {% dnd_row %}
+              {% dnd_module 'var-card' path='../modules/var-card-eu.module'
+                show_subheading=false,
+                title="Berlin Office",
+                show_date=false,
+                text="Friedrichstraße 95, 10117 <br />Berlin<br />Tel: +49 3080 9 21 60 90<br />E-mail: info.de@epiuse.com",
+                image_placement="trailing",
+                image_field={
+                  src:"https://2930497.fs1.hubspotusercontent-na1.net/hubfs/2930497/contact-cities.png"
+                },
+                link_card=false
+              %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+            
+          {% end_dnd_column %}
+        {% end_dnd_row %}
+
+            
+      {% end_dnd_column %}
+      
+      
+    {% end_dnd_section %}
+
+
+    
+
+
+
+{% end_dnd_area %}
+
+<div class="contact-container">
+{% module "form" 
+          path="@hubspot/form"
+          title="Contact us. Keep in touch."
+          form={
+            "form_id": "fed5a12d-d0b5-4e0e-a96f-63e73062fba1", 
+            "response_type": "redirect", 
+            "message": "Thanks for submitting the form.", 
+            "redirect_id": null, 
+            "redirect_url": "http://www.google.com" 
+          }
+          %}
+</div>
+
+<script>
+  $(document).ready(function(){
+
+    function setSticky(){
+      // Distance from top of document to top of footer.
+      topOfFooter = $('.footer').position().top;
+      // Distance user has scrolled from top, adjusted to take in height of sidebar (570 pixels inc. padding).
+      scrollDistanceFromTopOfDoc = $(document).scrollTop() + $('.contact-container').height() + 92;
+      // Difference between the two.
+      scrollDistanceFromTopOfFooter = scrollDistanceFromTopOfDoc - topOfFooter;
+
+      // If user has scrolled further than footer,
+      // pull sidebar up using a negative margin.
+      if (scrollDistanceFromTopOfDoc > topOfFooter) {
+        $('.contact-container').css('margin-top',  0 - scrollDistanceFromTopOfFooter);
+      } else  {
+        $('.contact-container').css('margin-top', 0);
+      }
+    }
+    if ($(window).width() > 768){
+      setSticky();
+      $( window ).on( "scroll", function() {
+      
+        
+        setSticky();
+
+
+      } );
+    }
+  });
+</script>
+
+{% endblock body %}
+
+{% block footer %}
+  {% global_partial path="./partials/footer-micro.html" %}
+{% endblock footer %}

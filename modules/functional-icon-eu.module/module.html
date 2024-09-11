@@ -1,0 +1,19 @@
+<!-- ******** MODULE ******** -->
+<!-- ____ EU Functional Icons ___ -->
+
+<functional-icons-eu-wc
+             att-icon="{% if module.icon_category == "cat-arrows" && module.cat_arrows %}{{module.cat_arrows}}{% 
+                          elif module.icon_category == "cat-data" && module.cat_data %}{{module.cat_data}}{% 
+                          elif module.icon_category == "cat-editing" && module.cat_editing %}{{module.cat_editing}}{% 
+                          elif module.icon_category == "cat-foundations" && module.cat_foundations %}{{module.cat_foundations}}{% 
+                          elif module.icon_category == "cat-company" && module.cat_company %}{{module.cat_company}}{% 
+                          elif module.icon_category == "cat-alerts" && module.cat_alerts %}{{module.cat_alerts}}{% 
+                       endif %}"
+             att-type="{{ module.icon_type }}"
+             att-size="{{ module.icon_size }}"
+             att-color="{{ module.icon_color }}"
+             att-color-opacity="{% if module.icon_color_opacity != "-100" %}{{ module.icon_color_opacity }}{% endif %}"
+             class = "{{ name }}"
+></functional-icons-eu-wc>
+
+<!-- ____ eu-fi-END ___ -->

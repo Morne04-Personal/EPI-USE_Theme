@@ -1,0 +1,25 @@
+
+{% set icon_color = "pale-blue" %}
+{% if module.ic_type == "ic-ple-blue" %}
+    {% set icon_color = "midnight-blue" %}
+{% endif %}
+{% set icon_path = '/images/epiuse-icons/'~ icon_color ~'/' ~ module.ic_icon ~ '.svg'%}
+{% set icon = get_asset_url(icon_path)  %}
+<div class="icon-card-container align-{{ module.styles.ic_align.horizontal_align|lower}}">
+<div class="icon-card {{ module.styles.ic_sizing}} {{ module.ic_type }} {{ name }}">
+  <div class="ic-inner">
+    <div class="ic-icon-cont">
+      <epiuse-icons-wc
+          att-icon="{{ icon }}"
+          att-size="108"
+          class="ic-eu-icon"
+      ></epiuse-icons-wc>
+    </div>
+    <div class="ic-text-content">
+      <h2 class="ic-heading-text">{{ module.ic_heading_text }}</h2>
+      {% if module.ic_show_title %}<h3 class="ic-title">{{ module.ic_title }}</h3>{% endif %}
+      <p class="ic-body-text">{{ module.ic_body_text }}</p>
+    </div>
+  </div>
+</div>
+</div>

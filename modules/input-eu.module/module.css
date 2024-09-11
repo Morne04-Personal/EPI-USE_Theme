@@ -1,0 +1,137 @@
+
+.input-container{
+  display: flex;
+}
+
+.input-container.align-right {
+  justify-content: flex-end;
+}
+.input-container.align-center {
+  justify-content: center;
+}
+
+
+.input-wrap {
+    max-width: 480px;
+    min-width: 311px;
+}
+
+.input-container label {
+    color: var(--charcoal-black-75);
+    font-family: var(--caption-regular-font-family);
+  font-size: var(--caption-regular-font-size);
+  font-weight: var(--caption-regular-font-weight);
+  line-height:  var(--caption-regular-line-height); 
+  margin-bottom: var(--margin-xs);  
+}
+
+.input textarea, .input input {
+  background-color: var(--midnight-blue-2);
+  border: none;
+  border-radius: 4px;
+  color: var(--charcoal-black);
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: var(--body-font-size);
+  padding: var(--padding-md);
+  width: 100% !important;
+	max-width: 100%;
+  margin-bottom: var(--margin-sm);
+}
+
+.input textarea.filled, .input input.filled , .input input:-webkit-autofill, .input textarea:-webkit-autofill{
+    background-color: var(--midnight-blue-5);
+    border: 1px solid var(--midnight-blue-10);
+}
+
+.input textarea:focus-visible, .input input:focus-visible {
+    border: 1px solid var(--charcoal-black);
+}
+
+.input textarea {
+    height: 128px;
+}
+
+.error .input textarea, .error .input input {
+    border: 1px solid var(--crimson-red);
+}
+
+.input textarea.status-success, .input input.status-success {
+    border: 1px solid var(--success-green);
+}
+
+.input textarea:hover, .input input:hover {
+    background-color: var(--midnight-blue-5);
+}
+
+
+
+
+.input textarea:focus, .input input:focus {
+  background-color: var(--pale-blue-10);
+}
+
+.input textarea:active, .input input:active {
+  background-color: var(--midnight-blue-2);
+}
+
+
+.input textarea::placeholder, .input input::placeholder  {
+  color: var(--charcoal-black-50);
+}
+
+.input textarea:hover::placeholder, .input input:hover::placeholder {
+    color: var(--charcoal-black);
+}
+
+.input textarea.disabled, .input input.disabled {
+    background-color: var(--grey-10);
+    color: var(--grey-50);
+}
+
+
+.input textarea.disabled::placeholder, .input input.disabled::placeholder {
+    color: var(--grey-25);
+}
+
+.input {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    top: 20px;
+    right: var(--padding-md);
+}
+
+.input-container .required {
+    float: right;
+    color: var(--crimson-red);
+    font-family: var(--caption-regular-font-family);
+    font-size: var(--caption-regular-font-size);
+    font-weight: var(--caption-regular-font-weight);
+    line-height:  var(--caption-regular-line-height);
+    margin-bottom: var(--margin-xs);
+}
+
+.input-container .error-message {
+    display: none;
+    color: var(--crimson-red);
+    font-family: var(--caption-regular-font-family);
+    font-size: var(--caption-regular-font-size);
+    font-weight: var(--caption-regular-font-weight);
+    line-height:  var(--caption-regular-line-height);
+}
+
+.input-container.error .error-message{
+    display: inline-block;
+}
+
+.input-container .success-message {
+    display: inline-block;
+    color: var(--success-green);
+    font-family: var(--caption-regular-font-family);
+    font-size: var(--caption-regular-font-size);
+    font-weight: var(--caption-regular-font-weight);
+    line-height:  var(--caption-regular-line-height);
+}

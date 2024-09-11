@@ -1,0 +1,245 @@
+<!-- ******** MODULE ******** -->
+<!-- ____ EU Card Carousel ___ -->
+
+<div class="card-slider-container">
+
+<div class="card-slider card-slider-{{name}} {{ name }}">
+  
+  {% for item in module.slide %}
+  
+    <div class="slide">
+      <div class="slide-inner clearfix">
+        <div class="card-slider-image" style="background-image: url({{ item.image_field.src|escape_url }});">
+        
+        
+        </div>
+        <div class="card-slider-content">
+          <h2 class="hide-on-mobile">
+            {{ item.subheading }}
+          </h2>
+          <h3 class="hide-on-desktop">
+            {{ item.subheading }}
+          </h3>
+          <h3 class="hide-on-mobile">
+            {{ item.title }}
+          </h3>
+          <h5 class="hide-on-desktop">
+            {{ item.title }}
+          </h5>
+          <span class="date">{{ item.date }}</span>
+
+          <p class="text">
+            {{ item.content }}
+          </p>
+        </div>
+      </div>
+      
+      
+    </div>
+  {% endfor %}
+</div>
+</div>
+
+<!-- ____ eu-cc-END ___ -->
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+{% require_js %}
+<script>
+
+
+  $(document).ready(function(){
+    $('.card-slider-{{name}}').slick({
+      {% if module.orientation == "vertical" %}'slidesToShow': 3,{% endif %}
+      'arrows': false,
+      'dots': true,
+      'autoplay': true,
+      'autoplaySpeed': 5000,
+      'adaptiveHeight': false
+    });
+    
+    {% if module.orientation == "horizontal" %}
+      if ($(window).width() > 1000) {
+
+      var maxHeight = 0;
+      $(".card-slider-{{name}} .card-slider-content").each(function() {
+        if ($(this).outerHeight() > maxHeight) {
+          maxHeight = $(this).outerHeight();
+        }
+      });
+
+        $('.card-slider-{{name}} .card-slider-image').height(maxHeight);
+      } else {
+        $('.card-slider-{{name}} .card-slider-image').height(300);
+      }
+
+      $(window).on('resize', function(){
+        if ($(window).width() > 1000) {
+
+        var maxHeight = 0;
+      $(".card-slider-{{name}} .card-slider-content").each(function() {
+        if ($(this).outerHeight() > maxHeight) {
+          maxHeight = $(this).outerHeight();
+        }
+      });
+
+      $('.card-slider-{{name}} .card-slider-image').height(maxHeight);
+        } else {
+        $('.card-slider-{{name}} .card-slider-image').height(300);
+        }
+
+      });
+          
+  
+    {% endif %}
+    
+  });
+
+</script>
+{% end_require_js %}
+
+<style>
+.card-slider-{{name}} {
+  
+  max-width: 1920px;
+  position: relative;
+  
+}
+
+
+.card-slider-container {
+  box-shadow: var(--shadow-lg);
+  border-radius: 4px;
+}
+
+  
+.card-slider .slide-inner {
+  background-color: var(--pure-white);
+}
+  
+
+.card-slider-{{name}}:after {
+ content: "";
+  display: block;
+  clear: both;
+}
+  
+  .card-slider-{{name}} .card-slider-image {
+ background-size: cover; 
+}
+  
+{% if module.orientation == "horizontal" %}
+
+
+@media (min-width: 1000px){
+  
+  .card-slider-{{name}}  .card-slider-image {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+}
+
+@media (max-width: 1000px){
+  .card-slider-{{name}}  .card-slider-image {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+}
+  
+.card-slider-{{name}}  .card-slider-image, .card-slider-{{name}} .card-slider-content {
+ width: 50%;
+  float: left;
+  box-sizing: border-box;
+}
+
+  {% else %}
+    .card-slider-{{name}}  .card-slider-image {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+  {% endif %}
+  
+.card-slider-{{name}} .card-slider-image img {
+ max-width: 100%; 
+  
+}
+  
+
+
+.card-slider-{{name}} .card-slider-content {
+ padding: var(--padding-lg); 
+ background-color: var(--pure-white);
+}
+
+
+.card-slider-{{name}} .date {
+  margin-bottom: var(--margin-md);
+}
+
+.card-slider-{{name}} h2 {
+  margin-bottom: var(--margin-sm); 
+  color: var(--midnight-blue);
+  font-size: var(--h2-font-size);
+  line-height: var(--h2-line-height);
+  font-weight: var(--h2-font-weight);
+  margin-top: 0;
+}
+
+.card-slider-{{name}} h3 {
+  margin-bottom: var(--margin-sm); 
+  color: var(--midnight-blue);
+  font-size: var(--h3-font-size);
+  line-height: var(--h3-line-height);
+  font-weight: var(--h3-font-weight);
+  margin-top: 0px;
+}
+  
+.card-slider-{{name}} h5 {
+  font-family: var(--h5-font-family);
+  font-size: var(--h5-font-size);
+  font-weight: var(--h5-font-weight);
+  line-height: var(--h5-line-height);
+  color: var(--midnight-blue);
+}
+
+.card-slider-{{name}} .date {
+ color: var(--midnight-blue); 
+  font-size: var(--caption-semibold-font-size);
+  line-height: var(--caption-semibold-line-height);
+  font-weight: var(--caption-semibold-line-height);
+  font-family: var(--caption-semibold-line-height);
+}
+.card-slider-{{name}} .text {
+  margin-top: var(--margin-sm);
+ margin-bottom: var(--margin-lg);
+ color: var(--charcoal-black); 
+}
+
+.slick-dots {
+ position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  list-style: none;
+}
+
+.slick-dots li {
+ display: inline-block; 
+  margin: 0 var(--margin-xs);
+}
+.slick-dots button {
+  border-radius: 0 !important;  
+  background-color: #919191 !important;
+}
+.slick-dots .slick-active button{
+   width: 24px !important;
+  background-color: #313131 !important;
+}
+
+@media (max-width: 1000px) {
+  .card-slider-{{name}}  .card-slider-image, .card-slider-{{name}} .card-slider-content {
+    width: 100%;
+    float: none;
+  }
+}
+
+</style>

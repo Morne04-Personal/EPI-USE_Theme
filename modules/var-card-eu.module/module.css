@@ -1,0 +1,276 @@
+
+.var-card-container{
+  display: flex;
+}
+
+.var-card-container.align-right {
+  justify-content: flex-end;
+}
+.var-card-container.align-center {
+  justify-content: center;
+}
+
+.var-card-container {
+  font-size: 0px;
+}
+
+.var-card {
+  
+  background-color: var(--pure-white);
+  color: var(--charcoal-black);
+  max-width: 596px;
+  min-width: 343px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  border-radius: 4px;
+}
+
+.var-card .image {
+  min-height: 300px;
+}
+
+.var-card .image-icon {
+  min-height: unset;
+}
+
+.var-card .client-logo img {
+  max-width: 180px;
+  width: 100%;
+}
+
+.var-card.linked-card:hover {
+
+  box-shadow: var(--shadow-2xl);
+}
+
+
+.var-card:active {
+  box-shadow: var(--shadow-lg);
+}
+
+.var-card:focus {
+  border: 1.5px solid var(--midnight-blue);
+  box-shadow: var(--shadow-2xl);
+}
+
+.card-horizontal {
+ max-width: 1200px; 
+ min-width: 700px;
+ 
+}
+
+.var-card .text {
+  min-height: 144px;
+}
+
+.var-card .content {
+  padding: var(--padding-xl);
+ 
+}
+
+.var-card.has-buttons .content {
+  padding-bottom: var(--padding-2xl);
+} 
+
+.var-card .date {
+  margin-bottom: var(--margin-md);
+  display: inline-block;
+}
+
+.var-card h2 {
+ margin-bottom: var(--margin-sm); 
+  color: var(--midnight-blue);
+  font-family: var(--h2-font-family);
+  font-size: var(--h2-font-size);
+  font-weight: var(--h2-font-weight);
+  line-height: var(--h2-line-height);
+  margin-top: 0;
+}
+
+.var-card h3 {
+ margin-bottom: var(--margin-sm); 
+  color: var(--midnight-blue);
+  font-family: var(--h3-font-family);
+  font-size: var(--h3-font-size);
+  font-weight: var(--h3-font-weight);
+  line-height: var(--h3-line-height);
+  margin-top: 0px;
+  min-height: 60px;
+}
+
+.var-card h5 {
+  margin-bottom: var(--margin-sm); 
+    font-family: var(--h5-font-family);
+    font-size: var(--h5-font-size);
+    font-weight: var(--h5-font-weight);
+    line-height: var(--h5-line-height);
+    margin-top: 0px;
+    color: var(--midnight-blue);
+  }
+
+.var-card .date {
+ color: var(--midnight-blue); 
+ font-family: var(--caption-semibold-font-family);
+  font-size: var(--caption-semibold-font-size);
+  line-height: var(--caption-semibold-line-height);
+  font-weight: var(--caption-semibold-font-weight);
+}
+
+.var-card .text {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height: var(--body-line-height);
+
+
+  overflow: hidden;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  margin-bottom: 0px;
+}
+
+
+@media (min-width: 768px){
+  .card-horizontal .image, .card-horizontal .content {
+    float: left; 
+    width: 50%;
+    box-sizing: border-box;
+    max-height: 512px;
+  }
+
+  .card-horizontal.card-icon .image {
+    width: 20%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    
+    text-align: center;
+    justify-content: center;
+  }
+
+  .card-horizontal.card-icon .content {
+    width: 80%;
+  }
+
+}
+
+.card-horizontal .image img {
+ width: 100%; 
+}
+
+.clearfix {
+  overflow: auto;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.card-background-midnight-blue {
+ background-color: var(--midnight-blue); 
+  color: var(--pure-white);
+}
+
+.card-background-midnight-blue h2, .card-background-midnight-blue h3, .card-background-midnight-blue h5, .card-background-midnight-blue .date, .card-background-midnight-blue .text {
+ color: var(--pure-white); 
+}
+
+.card-background-pale-blue {
+  background-color: var(--pale-blue);
+  color: var(--pure-white); 
+}
+
+.card-background-pale-blue h2, .card-background-pale-blue h3, .card-background-pale-blue h5, .card-background-pale-blue .date, .card-background-pale-blue .text {
+ color: var(--pure-white); 
+}
+
+.buttons {
+  position: absolute; 
+  bottom: 0;
+  right: 0;
+  display: flex;/*<!-- Note add 'display: flex' to container if multiple web components are next to each other to remove white space between them -->*/
+}
+
+
+.var-card .content {
+  position: relative;
+}
+
+.var-card .card-link {
+  display: block;
+
+  padding: 0px;
+  float: right; 
+
+}
+
+.var-card .card-link i {
+  font-size: 48px;
+  color: var(--pale-blue)
+}
+.card-background-pale-blue .card-link i {
+  color: var(--midnight-blue);
+
+}
+.card-background-midnight-blue .card-link i {
+  color: var(--pure-white);
+}
+
+.linked-card:hover {
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+  box-shadow: var(--shadow-2xl);
+
+}
+
+.var-card .image-icon {
+  padding: var(--padding-xl);
+  padding-bottom: 0px;
+}
+
+.var-card.card-image-trailing .image-icon {
+  padding-bottom: var(--padding-xl);
+  padding-top: 0px;
+}
+
+
+
+@media (max-width: 768px) {
+
+  .card .content {
+    padding: var(--padding-lg) var(--padding-md-lg);
+  }
+  .var-card-container {
+    text-align: center;
+  }
+
+  .card-horizontal {
+    max-width: 596px;
+    min-width: 343px;
+    
+    width: 100%;
+  }
+
+  .var-card .content {
+    padding: var(--padding-lg) var(--padding-md-lg)
+  }
+
+  .card-horizontal.card-icon .image {
+    padding: var(--padding-lg);
+    text-align: center;
+
+  }
+
+  .card-horizontal.card-icon .image-icon {
+    padding: var(--padding-md);
+  }
+
+  .var-card .image-icon {
+    padding: var(--padding-md)
+  }
+}

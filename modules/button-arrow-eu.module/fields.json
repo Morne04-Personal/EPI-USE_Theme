@@ -1,0 +1,176 @@
+[ {
+  "id" : "b58d405b-8286-bacd-392e-5f560aff5341",
+  "name" : "button_label",
+  "display_width" : null,
+  "label" : "Label",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Button"
+}, {
+  "id" : "fd46ea0d-a2f4-4f96-f3c7-1ad955ebc678",
+  "name" : "button_type",
+  "display_width" : null,
+  "label" : "Type",
+  "required" : true,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "btn-pri", "Primary" ], [ "btn-pri-inv", "Primary Inverted" ], [ "btn-sec", "Secondary" ], [ "btn-acc", "Accent" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "default" : "btn-pri"
+}, {
+  "id" : "bfdb40b8-a2b2-8cdc-95b7-33e33091ee0f",
+  "name" : "link_field",
+  "display_width" : null,
+  "label" : "Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "42cf4a89-ad72-3247-a523-009f126fcdbc",
+  "name" : "button_disabled",
+  "display_width" : null,
+  "label" : "Disabled",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "d43f30aa-e56e-4c1f-05b5-02d3f2e113b4",
+  "name" : "orientation",
+  "display_width" : null,
+  "label" : "Orientation",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "btn-horizontal", "Horizontal" ], [ "btn-vertical", "Vertical" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice"
+}, {
+  "id" : "c0892538-5caa-32ca-d197-e5a999ee4ec7",
+  "name" : "size",
+  "display_width" : null,
+  "label" : "Size",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "btn-sm", "Small" ], [ "btn-md", "Medium" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "default" : "btn-md"
+}, {
+  "id" : "styles",
+  "name" : "styles",
+  "display_width" : null,
+  "label" : "Styles",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "styles.ba_spacing",
+    "name" : "ba_spacing",
+    "display_width" : null,
+    "label" : "Spacing around button",
+    "required" : false,
+    "locked" : false,
+    "limits" : {
+      "padding" : {
+        "top" : {
+          "max" : 50,
+          "min" : 0,
+          "units" : [ "px" ]
+        },
+        "bottom" : {
+          "max" : 50,
+          "min" : 0,
+          "units" : [ "px" ]
+        },
+        "left" : {
+          "max" : 50,
+          "min" : 0,
+          "units" : [ "px" ]
+        },
+        "right" : {
+          "max" : 50,
+          "min" : 0,
+          "units" : [ "px" ]
+        }
+      },
+      "margin" : {
+        "top" : {
+          "max" : 50,
+          "min" : 0,
+          "units" : [ "px" ]
+        },
+        "bottom" : {
+          "max" : 50,
+          "min" : 0,
+          "units" : [ "px" ]
+        },
+        "left" : {
+          "max" : 50,
+          "min" : 0,
+          "units" : [ "px" ]
+        },
+        "right" : {
+          "max" : 50,
+          "min" : 0,
+          "units" : [ "px" ]
+        }
+      }
+    },
+    "type" : "spacing",
+    "default" : { }
+  }, {
+    "id" : "styles.ba_align_button",
+    "name" : "ba_align_button",
+    "display_width" : null,
+    "label" : "Align Button",
+    "required" : false,
+    "locked" : false,
+    "alignment_direction" : "HORIZONTAL",
+    "type" : "alignment",
+    "default" : {
+      "horizontal_align" : "LEFT"
+    }
+  }, {
+    "id" : "styles.ba_flex",
+    "name" : "ba_flex",
+    "display_width" : null,
+    "label" : "Button Flex",
+    "required" : true,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "ba-hug", "Hug" ], [ "ba-fill", "Fill" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "ba-hug"
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group"
+} ]

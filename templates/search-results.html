@@ -1,0 +1,60 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Boilerplate - search results
+  updatedBy: Morne
+  screenshotPath: ../../images/template-previews/search-results.png
+-->
+{% set template_css = "../css/templates/system.css" %}
+{% extends "./layouts/base.html" %}
+
+{% block header %}
+  {% global_partial path="./partials/header-global.html" %}
+{% endblock header %}
+  
+
+{% block body %}
+
+  {{require_css(get_asset_url("../css/templates/search.css"))}}
+<section class="content-wrapper">
+  <div class="container-fluid body-container body-container--search-results">
+    <div class="row-fluid-wrapper">
+      <div class="row-fluid" style="max-width: 1200px; margin: auto; padding: 128px 16px;">
+        <div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+        {%- if (get_asset_version("@hubspot/search_results") == 0) -%}
+          {% if request.query_dict.term %}
+            {% set search_query = request.query_dict.term %}
+          {% elif request.query_dict.q %}
+            {# v3 search api support #}
+            {% set search_query = request.query_dict.q %}
+          {% endif %}
+
+          {% module_block module 'search_results_content'
+            label='Search results heading',
+            path='@hubspot/rich_text'
+          %}
+            {% module_attribute 'html' %}
+              <h1>Results for &ldquo;{{ search_query|escape_html }}&rdquo;</h1>
+            {% end_module_attribute %}
+          {% end_module_block %}
+
+            {% module "search_results"
+              path="@hubspot/search_results"
+            %}
+
+          {%- else -%}
+
+            {% module "search_results"
+              path="@hubspot/search_results",
+              title={
+                "show_title": "true"
+              }
+            %}
+
+        {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock body %}
