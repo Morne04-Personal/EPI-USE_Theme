@@ -1,9 +1,0 @@
-<div class="filter">
-    <h2>{{module.filter_title}}</h2>
-
-
-    {% for item in module.filter %}
-        <a href="{{request.path}}{% if request.query == ''%}?{%else%}?{{request.query}}&{%endif %}filter={{ item.target }}">{{ item.filter_label }}</a>
-    {%endfor %}
-
-</div>
